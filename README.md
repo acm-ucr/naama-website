@@ -11,7 +11,7 @@
 
 ## Figma
 
-[NAAMA UCR Figma Design File](https://www.figma.com/)
+[NAAMA UCR Figma Design File](https://www.figma.com/design/WyGs09rHJaHpYGmNQsEO4V/NAAMA-Design?node-id=0-1&p=f&t=7GVXvSi5jGUILp9I-0)
 
 ## Node.js
 
