@@ -1,8 +1,19 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Playfair_Display, Nunito_Sans } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito_Sans({
+  subsets: ["latin"],
+  preload: true,
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+  variable: "--playfair-font",
+  preload: true,
+});
 
 export const metadata = {
   title: "NAAMA Nextgen @ UCR",
@@ -16,7 +27,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${playfair.variable} ${nunito.className}`}>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
