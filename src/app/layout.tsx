@@ -27,7 +27,9 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${nunito.className}`}>
+      <body
+        className={`${playfair.variable} ${nunito.className} bg-naama-blue-200`}
+      >
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
