@@ -16,8 +16,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "NAAMA Nextgen @ UCR",
-  description: "UCR Chapter of NAAMA Nextgen",
+  title: "NAAMA UCR",
+  description:
+    "An inclusive organization that advocates for Arab American healthcare professionals while promoting their professional development and cultural identity through education, philanthropy, and service.",
 };
 
 type LayoutProps = {
