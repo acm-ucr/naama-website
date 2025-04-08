@@ -1,9 +1,9 @@
-import { GoArrowUpLeft } from "@/react-icons";
-const Button = () => {
+import { GoArrowRight } from "react-icons/go";
+const Button = ( { message }: { message: string }) => {
   return (
-  <div roundedButton="w-22 h-22 bg-">
-
-  </div>;
+  <button className="w-33 h-10  bg-naama-blue-200 rounded-full">
+    
+  </button>
   )
 };
 // Font: Playfair Display, 18px, 96x22px, color #25459A
