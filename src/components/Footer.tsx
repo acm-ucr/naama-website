@@ -4,13 +4,13 @@ import logo from "@/../public/logo.webp";
 
 const Footer = () => {
   return (
-    <div className="bg-naama-blue-200 text-naama-ivory-100 font-nunito w-full items-center justify-center border p-10">
+    <div className="bg-naama-blue-200 text-naama-ivory-100 w-full items-center justify-center border p-10">
       <div className="grid grid-cols-5 gap-4">
         <div className="flex justify-center">
           <Image src={logo} alt="Naama Logo" width={150} height={150} />
         </div>
         <div className="mr-10 flex flex-col gap-2">
-          <p className="font-playfair">NAAMA UCR</p>
+          <p className="font-bold">NAAMA UCR</p>
           <p>
             Thanks for being part of our NAAMA community! Check out our links to
             stay connected and support your journey in healthcare.
