@@ -1,13 +1,13 @@
 import { GoArrowRight } from "react-icons/go";
 const Button = ({ message }: { message: string }) => {
   return (
-    <button className="bg-naama-blue-200 h-10 w-33 rounded-full">
-      {message}
-      <GoArrowRight />
-    </button>
+    <div>
+      <button className="font-playfair text-naama-blue-200 size-4 h-10 w-33 rounded-full bg-white tracking-tight">
+        {message}
+        <GoArrowRight />
+      </button>
+    </div>
   );
 };
-// Font: Playfair Display, 18px, 96x22px, color #25459A
-// Button is 133x40 px, radius 25px
 
 export default Button;
