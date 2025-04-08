@@ -14,7 +14,7 @@ const Example = (props: { text1: string; text2: string; text3: string }) => {
       </div>
       {
         <div className="bg-naama-blue-300 flex w-1/2 items-center justify-center p-5 text-center text-white">
-          {props.text1}
+          {props.text3}
         </div>
       }
     </div>
