@@ -9,7 +9,15 @@ const BoardCard = ({
   yearMajor: string;
   description: string;
 }) => {
-  return {};
+  return (
+    <div>
+      // DELETE LATER, ONLY DOING THIS SO I CAN PUSH
+      {name}
+      {title}
+      {yearMajor}
+      {description}
+    </div>
+  );
 };
 
 export default BoardCard;
