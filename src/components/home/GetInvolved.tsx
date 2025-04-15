@@ -1,4 +1,5 @@
-// import { GoArrowRight } from "react-icons/go";
+import { GoArrowRight } from "react-icons/go";
+import Link from 'next/link'
 
 const GetInvolved = () => {
   return (
@@ -8,11 +9,13 @@ const GetInvolved = () => {
           Excited to
           <span className="italic"> Get Involved?</span>
         </div>
-        <div className="flex">
+        <div className="flex gap-2 items-center">
           <div className="text-naama-blue-200 font-playfair">
-            click here for calendar 
+            click here for calendar  
           </div>
-          {/* <GoArrowRight/> */}
+          <Link href="/calendar">
+            <GoArrowRight className="rounded-full bg-white text-naama-blue-200"/>
+          </Link>
         </div>
       </div>
     </div>
