@@ -1,21 +1,25 @@
+import Image from "next/image";
+
 const BoardCard = ({
   name,
   title,
   yearMajor,
   description,
+  image,
 }: {
   name: string;
   title: string;
   yearMajor: string;
   description: string;
+  image: Image;
 }) => {
   return (
-    <div className="grid-cols-3 grid-rows-3 gap-1.5">
-      // DELETE LATER, ONLY DOING THIS SO I CAN PUSH
+    <div>
       {name}
       {title}
       {yearMajor}
       {description}
+      {image}
     </div>
   );
 };
