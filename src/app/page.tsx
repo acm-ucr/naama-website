@@ -3,7 +3,7 @@
 const Home = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      text1="Adjust" text2="these" text3="Props" 
+      text1="Adjust" text2="these" text3="Props"
     </div>
   );
 };
