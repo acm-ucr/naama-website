@@ -10,7 +10,7 @@ const BoardCard = ({
   description: string;
 }) => {
   return (
-    <div>
+    <div className="grid-cols-3 grid-rows-3 gap-1.5">
       // DELETE LATER, ONLY DOING THIS SO I CAN PUSH
       {name}
       {title}
