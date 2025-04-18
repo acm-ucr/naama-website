@@ -1,7 +1,7 @@
 const Gallery = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      Gallery
+      Moments with NAAMA UCR
     </div>
   );
 };
