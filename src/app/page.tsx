@@ -1,4 +1,3 @@
-//import Example from "@/components/Example";
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 
