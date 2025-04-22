@@ -4,7 +4,7 @@ import logo from "@/../public/logo.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-naama-blue-200 text-naama-ivory-100 w-full items-center justify-center border p-10">
+    <div className="bg-naama-blue-200 text-naama-ivory-100 font-nunito w-full items-center justify-center p-10">
       <div className="grid grid-cols-5 gap-4">
         <div className="flex justify-center">
           <Image src={logo} alt="Naama Logo" width={150} height={150} />
