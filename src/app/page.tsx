@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="bg-naama-blue-200 flex w-screen flex-col items-center justify-center">
       <NavBar />
-      <Button message="Join Now" />
+      <Button message="Join Now" href="/" />
       <Footer />
     </div>
   );

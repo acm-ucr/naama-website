@@ -1,12 +1,15 @@
 import { GoArrowRight } from "react-icons/go";
-const Button = ({ message }: { message: string }) => {
+import Link from "next/link";
+
+const Button = ({ message, href }: { message: string; href: string }) => {
   return (
-    <div>
-      <button className="font-playfair text-naama-blue-200 flex size-4 h-10 w-33 items-center justify-center gap-1.5 rounded-full bg-white tracking-tight drop-shadow-lg">
-        {message}
-        <GoArrowRight />
-      </button>
-    </div>
+    <Link
+      href={href}
+      className="font-playfair text-naama-blue-200 flex size-4 h-10 w-33 items-center justify-center gap-1.5 rounded-full bg-white tracking-tight drop-shadow-lg"
+    >
+      {message}
+      <GoArrowRight />
+    </Link>
   );
 };
 
