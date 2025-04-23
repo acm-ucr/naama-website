@@ -14,15 +14,15 @@ const BoardCard = ({
   image: string;
 }) => {
   return (
-    <div>
+    <div className="flex-col justify-evenly">
       <Image src={image} alt={name} />
 
-      <div className="font-playfair size-4.0 font-bold">{name}</div>
-      <div className="font-playfair size-4.0 font-bold italic">{title}</div>
-      <div className="font-nunito size-3.5 font-sans font-normal">
+      <div className="font-playfair text-med font-bold">{name}</div>
+      <div className="font-playfair text-med font-bold italic">{title}</div>
+      <div className="font-nunito py-7 font-sans text-sm font-normal">
         {yearMajor}
       </div>
-      <div className="font-nunito size-4.0 font-sans font-normal">
+      <div className="font-nunito text-med font-sans font-normal">
         {description}
       </div>
     </div>
