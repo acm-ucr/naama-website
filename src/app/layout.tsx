@@ -12,6 +12,7 @@ const nunito = Nunito_Sans({
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
+  style: ["italic", "normal"],
   display: "swap",
   weight: "400",
   variable: "--font-playfair",
