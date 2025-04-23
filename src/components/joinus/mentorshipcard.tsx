@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { HiOutlineUserGroup } from "react-icons/hi2";
 
 interface JoinUsCardProps {
