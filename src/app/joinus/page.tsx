@@ -9,7 +9,7 @@ const JoinUs = () => {
         title="Mentorship and Networking"
         description="Gain access to a strong network of healthcare professionals and
         mentors who can guide you on your academic and career path."
-        icon={<HiOutlineUserGroup className="text-naama-blue-300 h-10 w-10" />}
+        icon={<HiOutlineUserGroup" />}
       />
 
       <JoinUsCard
