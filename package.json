@@ -9,6 +9,7 @@
     "format": "npx prettier --write .",
     "check": "npx prettier --check .",
     "eslint": "npx eslint -c eslint.config.mjs",
+    "lint:fix": "eslint . --fix -c eslint.config.mjs",
     "prepare": "husky"
   },
   "dependencies": {
@@ -30,8 +31,10 @@
     "@typescript-eslint/parser": "~8.0.0",
     "eslint": "~9.8.0",
     "eslint-config-prettier": "~9.1.0",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "~5.2.1",
     "eslint-plugin-react": "~7.35.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "globals": "~15.9.0",
     "husky": "~9.1.4",
     "postcss": "~8.4.40",

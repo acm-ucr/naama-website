@@ -1,40 +1,29 @@
-import globals from "globals";
-import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
-import react from "eslint-plugin-react";
-import prettier from "eslint-plugin-prettier/recommended";
-import query from "@tanstack/eslint-plugin-query";
+// eslint.config.mjs
+import * as tsParser from "@typescript-eslint/parser";
+import eslintPluginTs from "@typescript-eslint/eslint-plugin";
+import eslintPluginReactHooks from "eslint-plugin-react-hooks";
+import eslintPluginImport from "eslint-plugin-import";
 
 export default [
   {
-    ignores: ["dist/*"],
+    ignores: ["**/.next/**", "**/node_modules/**"],
   },
-  { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
   {
-    ignores: [".next/", "out/", "node_modules"],
-  },
-  { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
-  { languageOptions: { globals: { ...globals.node } } },
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tsParser,
+    },
     plugins: {
-      react: react,
-      prettier: prettier,
-      "@typescript-eslint": tseslint.plugin,
-      "@tanstack/query": query,
+      "@typescript-eslint": eslintPluginTs,
+      "react-hooks": eslintPluginReactHooks,
+      import: eslintPluginImport,
     },
-  },
-  {
     rules: {
-      "react/react-in-jsx-scope": "off",
-      "@typescript-eslint/no-unused-expressions": [
-        "error",
-        { allowShortCircuit: true, allowTernary: true },
-      ],
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-use-before-define": "warn",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "import/no-extraneous-dependencies": "warn",
     },
-  },
-  {
-    ignores: ["*.config.*js"],
   },
 ];
