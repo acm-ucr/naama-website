@@ -1,7 +1,6 @@
 import JoinUsCard from "@/components/joinus/joincards";
 import { HiOutlineUserGroup } from "react-icons/hi2";
-import { Stethoscope } from "lucide-react";
-import { HandHeart } from "lucide-react";
+import { Stethoscope, HandHeart } from "lucide-react";
 
 const JoinUs = () => {
   return (
@@ -10,7 +9,7 @@ const JoinUs = () => {
         title="Mentorship and Networking"
         description="Gain access to a strong network of healthcare professionals and
         mentors who can guide you on your academic and career path."
-        icon={<HiOutlineUserGroup className="text-naama-blue-300 h-10 w-10" />}
+        icon={<HiOutlineUserGroup" />}
       />
 
       <JoinUsCard
