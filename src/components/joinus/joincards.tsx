@@ -12,7 +12,7 @@ const JoinUsCard = ({ title, description, icon }: JoinUsCardProps) => {
         <div className="text-naama-blue-200 font-nunito text-xl font-bold">
           {title}
         </div>
-        <p className="text-naama-blue-200 font-sans-nunito mt-3 text-center font-[400]">
+        <p className="text-naama-blue-200 font-sans-nunito mt-3 text-center">
           {description}
         </p>
         <div className="bg-naama-blue-100 h-12 w-12 self-end rounded-full">
