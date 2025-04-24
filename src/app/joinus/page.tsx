@@ -1,7 +1,6 @@
 import JoinUsCard from "@/components/joinus/joincards";
 import { HiOutlineUserGroup } from "react-icons/hi2";
-import { Stethoscope } from "lucide-react";
-import { HandHeart } from "lucide-react";
+import { Stethoscope, HandHeart } from "lucide-react";
 
 const JoinUs = () => {
   return (
