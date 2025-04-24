@@ -4,14 +4,18 @@ import { ReactQueryClientProvider } from "@/utils/react-query";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+  variable: "--font-nunito",
   preload: true,
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
+  style: ["italic", "normal"],
   display: "swap",
   weight: "400",
-  variable: "--playfair-font",
+  variable: "--font-playfair",
   preload: true,
 });
 
@@ -28,7 +32,7 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${nunito.className}`}>
+      <body className={`${playfair.variable} ${nunito.variable}`}>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
