@@ -1,9 +1,11 @@
-const Gallery = () => {
+import Heading from "@/components/Title";
+
+const Board = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-blue-800">
-      <h1 className="font-serif text-5xl text-white">Moments with NAAMA UCR</h1>
+    <div className="flex h-screen w-screen items-center justify-center">
+      <Heading Titlename="Moments with NAAMA UCR" />
     </div>
   );
 };
 
-export default Gallery;
+export default Board;
