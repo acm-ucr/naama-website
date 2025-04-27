@@ -24,8 +24,6 @@ const JoinUsCard = ({ title, description, icon: Icon }: JoinUsCardProps) => {
         </div>
       </div>
     </div>
-
-    
   );
 };
 
