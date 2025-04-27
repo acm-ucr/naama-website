@@ -1,6 +1,4 @@
 import { IconType } from "react-icons";
-import { HiOutlineUserGroup } from "react-icons/hi2";
-import { Stethoscope, HandHeart } from "lucide-react";
 
 interface JoinUsCardProps {
   title: string;
