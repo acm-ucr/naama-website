@@ -1,7 +1,10 @@
 import GetInvolved from "@/components/about/GetInvolved";
+import ExploreOurEvents from "@/components/home/ExploreOurEvents";
+
 const About = () => {
   return (
-    <div className="h-full w-full flex-col">
+    <div className="flex w-full flex-grow flex-col">
+      <ExploreOurEvents />
       <GetInvolved />
     </div>
   );

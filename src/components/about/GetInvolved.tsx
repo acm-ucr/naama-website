@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const GetInvolved = () => {
   return (
-    <div className="from-naama-blue-100 to bg-naama-ivory-100 flex h-1/2 w-full flex-col items-center justify-center gap-4 bg-gradient-to-bl">
+    <div className="from-naama-blue-100 to bg-naama-ivory-100 flex h-96 w-full flex-col items-center justify-center gap-4 bg-gradient-to-bl">
       <div className="flex flex-col items-center gap-2 text-center">
         <div className="text-naama-blue-200 font-playfair text-4xl">
           Excited to
