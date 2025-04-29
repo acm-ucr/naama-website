@@ -10,7 +10,7 @@ const JoinCommunity = () => {
         </p>
         <div className="flex flex-col items-center gap-4">
           <p className="font-nunito text-center text-lg">
-            Want to be part of these experiences? fill out the application form
+            Want to be part of these experiences? Fill out the application form
             to
             <br />
             become a member and start your journey with us today!
