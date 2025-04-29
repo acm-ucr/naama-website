@@ -1,7 +1,9 @@
+import JoinCommunity from "@/components/home/JoinCommunity";
+
 const Gallery = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Gallery
+    <div className="flex h-screen w-screen flex-col items-center justify-center">
+      <JoinCommunity />
     </div>
   );
 };
