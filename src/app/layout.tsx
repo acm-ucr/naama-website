@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Playfair_Display, Nunito_Sans } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
@@ -12,6 +14,7 @@ const nunito = Nunito_Sans({
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
+  style: ["italic", "normal"],
   display: "swap",
   weight: "400",
   variable: "--font-playfair",
@@ -31,8 +34,12 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${nunito.variable}`}>
+      <body
+        className={`bg-naama-blue-200 flex h-screen flex-col ${playfair.variable} ${nunito.variable}`}
+      >
+        <NavBar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+        <Footer />
       </body>
     </html>
   );

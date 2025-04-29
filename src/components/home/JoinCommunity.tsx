@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 
 const JoinCommunity = () => {
   return (
-    <div className="bg-naama-blue-100 relative flex h-3/4 w-full justify-center overflow-hidden text-white">
+    <div className="bg-naama-blue-100 relative flex h-128 w-full justify-center overflow-hidden text-white">
       <div className="to-naama-blue-100 absolute aspect-square h-full -translate-y-1/2 rounded-full bg-white bg-gradient-to-t to-40%"></div>
       <div className="z-10 flex h-3/4 flex-col items-center justify-between py-4">
         <p className="font-playfair text-4xl">
