@@ -4,7 +4,7 @@ import { FaHandHoldingHeart } from "react-icons/fa";
 
 const ExploreOurEvents = () => {
   return (
-    <div className="bg-naama-blue-100 font-nunito flex w-screen justify-center gap-5 pt-10 pr-15 pb-10 text-white">
+    <div className="bg-naama-blue-100 font-nunito flex w-full justify-center gap-5 pt-10 pr-15 pb-10 text-white">
       <div className="font-playfair mr-5 w-1/3 items-center justify-center pl-5 text-center text-2xl text-white">
         Explore <span className="italic"> Our Events </span>
       </div>
