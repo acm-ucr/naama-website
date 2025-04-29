@@ -1,8 +1,7 @@
-import GetInvolved from "@/components/home/GetInvolved";
+import GetInvolved from "@/components/about/GetInvolved";
 const About = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      About Us
+    <div className="h-full w-full flex-col">
       <GetInvolved />
     </div>
   );

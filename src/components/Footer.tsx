@@ -7,7 +7,13 @@ const Footer = () => {
     <div className="bg-naama-blue-200 text-naama-ivory-100 font-nunito w-full items-center justify-center p-10">
       <div className="grid grid-cols-5 gap-4">
         <div className="flex justify-center">
-          <Image src={logo} alt="Naama Logo" width={150} height={150} />
+          <Image
+            src={logo}
+            alt="Naama Logo"
+            width={150}
+            height={150}
+            draggable={false}
+          />
         </div>
         <div className="mr-10 flex flex-col gap-2">
           <p className="font-bold">NAAMA UCR</p>
@@ -39,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-naama-ivory-100 mt-4 h-0.5 w-full"></div>
+      <div className="bg-naama-ivory-100 mt-8 h-0.5 w-full"></div>
     </div>
   );
 };
