@@ -5,7 +5,7 @@ import WhoAreWe from "@/components/home/WhoAreWe";
 
 const Home = () => {
   return (
-    <div className="bg-naama-blue-200 flex w-full flex-col">
+    <div className="bg-naama-blue-200 flex w-full grow flex-col">
       <Hero />
       <WhoAreWe />
       <JoinUs />

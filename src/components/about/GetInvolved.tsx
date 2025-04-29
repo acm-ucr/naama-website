@@ -9,14 +9,12 @@ const GetInvolved = () => {
           Excited to
           <span className="italic"> Get Involved?</span>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="text-naama-blue-200 font-playfair text-lg">
+        <Link href="/calendar" className="flex items-center gap-2">
+          <div className="text-naama-blue-200 font-nunito text-lg">
             click here for the calendar
           </div>
-          <Link href="/calendar">
-            <GoArrowRight className="text-naama-blue-200 h-6 w-6 rounded-full bg-white" />
-          </Link>
-        </div>
+          <GoArrowRight className="text-naama-blue-200 h-6 w-6 rounded-full bg-white/75" />
+        </Link>
       </div>
     </div>
   );
