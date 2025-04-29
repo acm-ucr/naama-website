@@ -15,7 +15,11 @@ const JoinCommunity = () => {
             <br />
             become a member and start your journey with us today!
           </p>
-          <Button message="Member Form" href="/" />
+          <Button
+            message="Member Form"
+            href="/"
+            className="to-naama-bl to-naama-blue-100 bg-gradient-to-r"
+          />
         </div>
       </div>
     </div>
