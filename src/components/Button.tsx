@@ -1,15 +1,13 @@
 import { GoArrowRight } from "react-icons/go";
 import Link from "next/link";
 
-const Button = ({
-  message,
-  href,
-  className,
-}: {
+interface ButtonProps {
   message: string;
   href: string;
   className?: string;
-}) => {
+}
+
+const Button = ({ message, href, className }: ButtonProps) => {
   return (
     <Link
       href={href}
