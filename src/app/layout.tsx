@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`bg-naama-blue-200 h-screen ${playfair.variable} ${nunito.variable}`}
+        className={`bg-naama-blue-200 flex h-screen flex-col ${playfair.variable} ${nunito.variable}`}
       >
         <NavBar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
