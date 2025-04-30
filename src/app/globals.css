@@ -1,3 +1,11 @@
 @import "tailwindcss";
 
-@config '../../tailwind.config.ts';
+@theme {
+  --color-naama-blue-100: #86adea;
+  --color-naama-blue-200: #25459a;
+  --color-naama-blue-300: #0a2469;
+  --color-naama-ivory-100: #f7f2eb;
+
+  --font-nunito: "Nunito_Sans";
+  --font-playfair: "Playfair_Display";
+}
