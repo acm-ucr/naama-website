@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 const BoardCard = ({
   name,
@@ -11,7 +11,7 @@ const BoardCard = ({
   title: string;
   yearMajor: string;
   description: string;
-  image: string;
+  image: StaticImageData;
 }) => {
   return (
     <div className="flex-col justify-evenly">
