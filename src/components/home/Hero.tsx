@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Button from "@/components/Button";
 import CircularText from "@/components/CircularText";
+import heroImage from "@/public/gallery/image16.webp";
 
 const Hero = () => {
   return (
@@ -17,7 +19,14 @@ const Hero = () => {
         </p>
         <Button message="Join Now" href="/" />
       </div>
-      <div className="w-1/2 border">Image</div>
+      <div className="w-1/2 p-4">
+        <Image
+          src={heroImage}
+          alt="Hero Image"
+          className="h-full w-full"
+          priority
+        />
+      </div>
     </div>
   );
 };
