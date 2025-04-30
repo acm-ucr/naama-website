@@ -1,9 +1,9 @@
-import Heading from "@/components/Title";
+import Title from "@/components/Title";
 
 const Board = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <Heading Titlename="Calendar" />
+      <Title title="Events Calendar" />
     </div>
   );
 };
