@@ -1,9 +1,11 @@
-import Heading from "@/components/Title";
+import JoinCommunity from "@/components/home/JoinCommunity";
+import Title from "@/components/Title";
 
 const Board = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Heading Titlename="Moments with NAAMA UCR" />
+    <div className="flex w-screen grow flex-col items-center justify-center">
+      <Title title="Meet the board" />
+      <JoinCommunity />
     </div>
   );
 };

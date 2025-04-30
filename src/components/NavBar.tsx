@@ -7,10 +7,16 @@ const NavBar = () => {
     <div className="sticky top-0 z-50 grid w-full grid-cols-3 place-items-center font-bold">
       <div className="m-8">
         <Link href="/">
-          <Image src={logo} alt="Naama Logo" width={75} height={75} />
+          <Image
+            src={logo}
+            alt="Naama Logo"
+            width={75}
+            height={75}
+            draggable={false}
+          />
         </Link>
       </div>
-      <div className="font-playfair text-naama-blue-200 flex gap-x-10 rounded-full bg-white px-4 py-2 text-lg opacity-75">
+      <div className="font-playfair text-naama-blue-200 flex gap-x-12 rounded-full bg-white px-10 py-2 text-lg opacity-75">
         <Link href="/about">About</Link>
         <Link href="/calendar">Calendar</Link>
         <Link href="/board">Board</Link>
