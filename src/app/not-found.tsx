@@ -1,10 +1,9 @@
 const NotFound = () => {
   return (
-    <div className="bg-naama-blue-200 font-playfair flex h-screen flex-col items-center justify-center text-2xl text-white">
-      <p className="text-6xl">404</p>
-      <p className="text-center text-4xl">
-        Oh no! The page you're looking for can <br />
-        not be found
+    <div className="bg-naama-blue-200 font-playfair flex grow flex-col items-center justify-center gap-4 text-2xl text-white">
+      <p className="mb-2 text-6xl">404</p>
+      <p className="w-1/3 text-center text-4xl">
+        Oh no! The page you're looking for can't be found!
       </p>
     </div>
   );

@@ -1,14 +1,28 @@
+import { HiOutlineUserGroup } from "react-icons/hi2";
+import { Stethoscope, HandHeart } from "lucide-react";
+import JoinUsCard from "@/components/home/JoinCard";
+
 const JoinUs = () => {
   return (
-    <div className="bg-naama-blue-200 flex h-screen flex-col items-center justify-center text-center text-white">
-      <div className="font-playfair text-5xl">
-        Come <span className="italic"> Join Us</span>
-      </div>
-      <p className="py-15 text-2xl">
-        Whether you're looking to expand your knowledge or gain hands-on <br />
-        experience, we are here to help you pave the way to <br />{" "}
-        <span className="font-bold">a successful future in medicine.</span>
-      </p>
+    <div className="flex justify-center p-10">
+      <JoinUsCard
+        title="Mentorship and Networking"
+        description="Gain access to a strong network of healthcare professionals and
+        mentors who can guide you on your academic and career path."
+        icon={HiOutlineUserGroup}
+      />
+
+      <JoinUsCard
+        title="Professional Development"
+        description="Participate in workshops, guest speaker events, and hands-on experiences that enhance your medical and healthcare career prospects."
+        icon={Stethoscope}
+      />
+
+      <JoinUsCard
+        title="Community and Advocacy"
+        description="Join a community that celebrates Arab American culture while engaging in meaningful outreach and service projects that make a difference."
+        icon={HandHeart}
+      />
     </div>
   );
 };
