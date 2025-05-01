@@ -1,4 +1,4 @@
-import JoinCommunity from "@/components/home/JoinCommunity";
+import JoinCommunity from "@/components/gallery/JoinCommunity";
 
 const Gallery = () => {
   return (
