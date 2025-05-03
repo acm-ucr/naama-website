@@ -6,11 +6,10 @@ interface TitleProps {
 
 const Title = ({ title }: TitleProps) => {
   return (
-    <div className="text-naama-ivory-100 bg-naama-blue-200 w-full items-center justify-center p-10">
-      <div className="flex h-screen w-screen items-center justify-start pl-20">
-        <h1 className="font-playfair text-5xl">{title}</h1>
+    <div className="text-naama-ivory-100 w-3/4 pt-40">
+      <div className="flex h-screen w-screen pl-20">
+        <div className="font-playfair text-5xl">{title}</div>
       </div>
-      <div className="bg-naama-ivory-100 mt-4 h-0.5 w-full"></div>
     </div>
   );
 };
