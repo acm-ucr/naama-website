@@ -1,6 +1,8 @@
-const JoinUs = () => {
+import JoinUs from "./JoinUs";
+
+const ComeJoinUs = () => {
   return (
-    <div className="bg-naama-blue-200 flex h-screen flex-col items-center justify-center text-center text-white">
+    <div className="bg-naama-blue-200 flex flex-col items-center justify-center py-36 text-center text-white">
       <div className="font-playfair text-5xl">
         Come <span className="italic"> Join Us</span>
       </div>
@@ -9,8 +11,9 @@ const JoinUs = () => {
         experience, we are here to help you pave the way to <br />{" "}
         <span className="font-bold">a successful future in medicine.</span>
       </p>
+      <JoinUs />
     </div>
   );
 };
 
-export default JoinUs;
+export default ComeJoinUs;
