@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/../public/logo.svg";
+import { Links } from "../data/links";
 
 const NavBar = () => {
   return (
@@ -17,10 +18,11 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="font-playfair text-naama-blue-200 flex gap-x-12 rounded-full bg-white px-10 py-2 text-lg opacity-75">
-        <Link href="/about">About</Link>
-        <Link href="/calendar">Calendar</Link>
-        <Link href="/board">Board</Link>
-        <Link href="/gallery">Gallery</Link>
+        {Links.map(({ label, href }) => (
+          <Link key={label} href={href}>
+            {label}
+          </Link>
+        ))}
       </div>
     </div>
   );
