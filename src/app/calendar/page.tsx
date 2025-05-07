@@ -1,9 +1,11 @@
-const Calendar = () => {
+import Title from "@/components/Title";
+
+const Board = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      Calendar
+      <Title title="Events Calendar" />
     </div>
   );
 };
 
-export default Calendar;
+export default Board;

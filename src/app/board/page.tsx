@@ -1,3 +1,4 @@
+import Title from "@/components/Title";
 import BoardCard from "@/components/BoardCard";
 import Alexis from "../../../public/board/Alexis_Battikha.webp";
 import Raymon from "../../../public/board/Raymon_Marcos.webp";
