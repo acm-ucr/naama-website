@@ -13,12 +13,12 @@ const WhoAreWe = () => {
       <div className="bg-naama-ivory-100 absolute inset-0 opacity-80" />
 
       <div className="relative z-10 flex h-full w-full items-center justify-center gap-20">
-        <h1 className="text-naama-blue-200 font-playfair text-6xl">
+        <h1 className="text-naama-blue-200 font-playfair text-8xl">
           <span className="underline">Who</span> are
           <span className="italic"> We</span>?
         </h1>
-        <div className="flex-col px-40">
-          <p className="font-nunito text-naama-blue-200 max-w-3xl pb-10 text-2xl">
+        <div className="flex-col px-60">
+          <p className="font-nunito text-naama-blue-200 max-w-5xl pb-10 text-4xl">
             NAAMA NextGen UCR is a student chapter of the National Arab American
             Medical Association dedicated to
             <span className="font-extrabold"> empowering </span>
