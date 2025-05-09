@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 const WhoAreWe = () => {
   return (
-    <div className="relative h-[500px] w-full">
+    <div className="relative h-[800px] w-full">
       <Image
         src={groupHome}
         alt="groupHome"
