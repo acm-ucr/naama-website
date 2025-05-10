@@ -8,9 +8,9 @@ const Hero = () => {
     <div className="font-nunito flex w-full items-start justify-center py-8 text-white">
       <div className="flex w-1/2 flex-col items-center justify-center text-center">
         <CircularText text="University of California, Riverside Chapter" />
-        <div className="font-playfair text-6xl">
+        <h1 className="font-playfair text-6xl">
           National Arab American <br /> Medical Association
-        </div>
+        </h1>
         <p className="mt-8 mb-16">
           Empowering future healthcare leaders through{" "}
           <span className="font-bold">knowledge, support,</span> <br /> and a{" "}
