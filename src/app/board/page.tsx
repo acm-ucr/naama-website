@@ -9,7 +9,7 @@ import Mariam from "../../../public/board/Mariam_Abbas.webp";
 const Board = () => {
   return (
     <div className="w-screenitems-center h-screen justify-center">
-      <div className="flex grid grid-cols-3 grid-rows-2 justify-evenly gap-15 px-10">
+      <div className="grid grid-cols-3 grid-rows-2 justify-evenly gap-15 px-10">
         <BoardCard
           image={Raymon}
           name="Raymon Marcos"
