@@ -5,7 +5,7 @@ import { Links } from "../data/links";
 
 const NavBar = () => {
   return (
-    <div className="sticky top-0 z-50 grid w-full grid-cols-3 place-items-center font-bold">
+    <div className="sticky top-0 z-2 grid w-full grid-cols-3 place-items-center font-bold">
       <div className="m-8">
         <Link href="/">
           <Image
