@@ -45,14 +45,18 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
     today.getDate() === date.getDate() &&
     today.getMonth() === date.getMonth() &&
     today.getFullYear() === date.getFullYear();
-  
+
   const currentMonth = displayMonth.getMonth() === date.getMonth();
 
   return (
     <div
-      className={`${isToday ? "bg-naama-blue-200 opacity-35 text-naama-ivory-100" : "bg-naama-ivory-100 text-naama-blue-200"} scrollbar-hidden h-20 overflow-y-auto border md:h-24`}
+      className={`${isToday ? "bg-naama-blue-200 text-naama-ivory-100 opacity-35" : "bg-naama-ivory-100 text-naama-blue-200"} scrollbar-hidden h-20 overflow-y-auto border md:h-24`}
     >
-      <p className={`${currentMonth ? "" : "invisible"} sticky px-2 text-right`}>{date.getDate()}</p>
+      <p
+        className={`${currentMonth ? "" : "invisible"} sticky px-2 text-right`}
+      >
+        {date.getDate()}
+      </p>
 
       {events?.map(({ title, start, end, location, description }, index) => {
         const startDate = new Date(start as string);
@@ -64,7 +68,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
         ) {
           return (
             <div
-              className="my-1 cursor-pointer text-ellipsis p-1 text-center text-white hover:bg-opacity-100"
+              className="hover:bg-opacity-100 my-1 cursor-pointer p-1 text-center text-ellipsis text-white"
               key={index}
               onClick={() =>
                 setCurrent({ title, start, end, location, description })
@@ -98,17 +102,19 @@ function Calendar({
       <DayPicker
         showOutsideDays={showOutsideDays}
         className={cn(
-          "mb-10 rounded-none border-none font-playfair p-3",
+          "font-playfair mb-10 rounded-none border-none p-3",
           className,
         )}
         classNames={{
-          months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
+          months:
+            "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
           month:
             "space-y-8 md:w-2/3 w-[90%] flex justify-right flex-col mx-auto",
           caption: "flex justify-end p-1 relative items-center",
           caption_label: "text-5xl font-medium text-naama-blue-200",
           nav: "space-x-1 flex items-center",
-          nav_button: "h-10 w-10 bg-naama-blue-200 p-0 opacity-90 hover:opacity-100 rounded-md",
+          nav_button:
+            "h-10 w-10 bg-naama-blue-200 p-0 opacity-90 hover:opacity-100 rounded-md",
           nav_button_previous: "absolute md:left-1/3 left-[20%]",
           nav_button_next: "absolute md:right-1/3 right-[16%]",
           table: "w-full border-collapse space-y-1 table-fixed",
@@ -128,20 +134,21 @@ function Calendar({
           day_outside:
             "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
           day_disabled: "text-naama-blue-200 opacity-50",
-          day_range_middle: "aria-selected:bg-accent aria-selected:text-naama-blue-200",
+          day_range_middle:
+            "aria-selected:bg-accent aria-selected:text-naama-blue-200",
           day_hidden: "invisible",
           ...classNames,
         }}
         components={{
           IconLeft: ({ className, ...props }) => (
             <MoveLeft
-              className={cn("h-10 w-10 text-naama-ivory-100", className)}
+              className={cn("text-naama-ivory-100 h-10 w-10", className)}
               {...props}
             />
           ),
           IconRight: ({ className, ...props }) => (
             <MoveRight
-              className={cn("h-10 w-10 text-naama-ivory-100", className)}
+              className={cn("text-naama-ivory-100 h-10 w-10", className)}
               {...props}
             />
           ),
@@ -156,14 +163,15 @@ function Calendar({
         }}
         formatters={{
           formatWeekdayName: (weekday) => {
-            const day = weekday.toLocaleDateString("en-US", { weekday: "short"});
+            const day = weekday.toLocaleDateString("en-US", {
+              weekday: "short",
+            });
             return day === "Thu" ? "Thurs" : day;
           },
         }}
         {...props}
       />
     </>
-    
   );
 }
 Calendar.displayName = "Calendar";

@@ -30,9 +30,9 @@ const EventCard = ({ title, location, start, description }: EventProps) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="m-4 mx-auto flex w-full max-w-6xl flex-col gap-6 rounded-3xl bg-white p-6 text-hsa-gray-300 shadow-md shadow-gray-500 md:flex-row"
+      className="text-hsa-gray-300 m-4 mx-auto flex w-full max-w-6xl flex-col gap-6 rounded-3xl bg-white p-6 shadow-md shadow-gray-500 md:flex-row"
     >
-      <div className="flex flex-col items-center justify-center p-4 text-center font-songMyung">
+      <div className="font-songMyung flex flex-col items-center justify-center p-4 text-center">
         <Image
           src={hsa7}
           width={200}
@@ -50,7 +50,7 @@ const EventCard = ({ title, location, start, description }: EventProps) => {
           alt="Decoration"
         />
       </div>
-      <div className="mx-auto h-2 w-8/12 rounded-xl bg-hsa-pink-400 md:h-auto md:w-4" />
+      <div className="bg-hsa-pink-400 mx-auto h-2 w-8/12 rounded-xl md:h-auto md:w-4" />
       <div className="my-auto flex flex-col gap-2 p-4 text-center md:w-5/6 md:text-left">
         <div className="font-songMyung text-3xl md:text-5xl">{title}</div>
         <div className="text-lg font-semibold md:text-xl">
