@@ -1,4 +1,3 @@
-import Title from "@/components/Title";
 import CalendarEvents from "@/components/calendar/CalendarEvents";
 
 const Calendar = () => {
