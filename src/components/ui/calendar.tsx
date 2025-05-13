@@ -95,8 +95,8 @@ function Calendar({
   ...props
 }: CalendarProps) {
   return (
-    <>
-      <p>
+    <div className="">
+      <p className="text-5xl">
         Take a look at the <span className="italic">Calendar</span>
       </p>
       <DayPicker
@@ -110,13 +110,13 @@ function Calendar({
             "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
           month:
             "space-y-8 md:w-2/3 w-[90%] flex justify-right flex-col mx-auto",
-          caption: "flex justify-end p-1 relative items-center",
+          caption: "flex items-center justify-center pl-[43vw] relative",
           caption_label: "text-5xl font-medium text-naama-blue-200",
-          nav: "space-x-1 flex items-center",
+          nav: "gap-2 flex items-center",
           nav_button:
             "h-10 w-10 bg-naama-blue-200 p-0 opacity-90 hover:opacity-100 rounded-md",
-          nav_button_previous: "absolute md:left-1/3 left-[20%]",
-          nav_button_next: "absolute md:right-1/3 right-[16%]",
+          nav_button_previous: "absolute right-[20.8vw]",
+          nav_button_next: "absolute right-[0vw]",
           table: "w-full border-collapse space-y-1 table-fixed",
           head_row: "flex",
           head_cell:
@@ -171,7 +171,7 @@ function Calendar({
         }}
         {...props}
       />
-    </>
+    </div>
   );
 }
 Calendar.displayName = "Calendar";
