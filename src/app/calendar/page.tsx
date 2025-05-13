@@ -1,11 +1,11 @@
-import Title from "@/components/Title";
+import CalendarEvents from "@/components/calendar/CalendarEvents";
 
-const Board = () => {
+const Calendar = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Title title="Events Calendar" />
+    <div className="bg-naama-ivory-100">
+      <CalendarEvents />
     </div>
   );
 };
 
-export default Board;
+export default Calendar;
