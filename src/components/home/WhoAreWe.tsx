@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 const WhoAreWe = () => {
   return (
-    <div className="relative h-[800px] w-full">
+    <div className="relative h-96 w-full">
       <Image
         src={groupHome}
         alt="groupHome"
@@ -12,13 +12,14 @@ const WhoAreWe = () => {
       />
       <div className="bg-naama-ivory-100 absolute inset-0 opacity-80" />
 
-      <div className="relative z-10 flex h-full w-full items-center justify-center gap-20">
-        <h1 className="text-naama-blue-200 font-playfair text-8xl">
-          <span className="underline">Who</span> are
+      <div className="relative z-10 flex h-full w-full items-center gap-20 px-32">
+        <h1 className="text-naama-blue-200 font-playfair text-5xl font-bold whitespace-nowrap">
+          <span className="underline decoration-2 underline-offset-8">Who</span>{" "}
+          are
           <span className="italic"> We</span>?
         </h1>
-        <div className="flex-col px-60">
-          <p className="font-nunito text-naama-blue-200 max-w-5xl pb-10 text-4xl">
+        <div className="flex flex-col gap-4">
+          <p className="font-nunito text-naama-blue-200 p-10 text-xl">
             NAAMA NextGen UCR is a student chapter of the National Arab American
             Medical Association dedicated to
             <span className="font-extrabold"> empowering </span>
@@ -30,7 +31,7 @@ const WhoAreWe = () => {
             <span className="font-extrabold"> service initiatives</span>.
           </p>
           <Button
-            className="flex justify-self-end"
+            className="mr-14 ml-auto"
             message="Learn More"
             href="/about"
           />
