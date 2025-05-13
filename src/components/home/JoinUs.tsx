@@ -4,7 +4,7 @@ import JoinUsCard from "@/components/home/JoinCard";
 
 const JoinUs = () => {
   return (
-    <div className="flex justify-center p-10">
+    <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 px-2 sm:px-8">
       <JoinUsCard
         title="Mentorship and Networking"
         description="Gain access to a strong network of healthcare professionals and
