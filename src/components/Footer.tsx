@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-naama-ivory-100 mt-8 h-0.5 w-full"></div>
+      <div className="bg-naama-ivory-100 mt-8 h-0.5 w-full" />
     </div>
   );
 };

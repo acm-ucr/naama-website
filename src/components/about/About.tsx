@@ -10,12 +10,7 @@ const AboutUs = () => {
         <p className="mt-5 text-white">
           Our mission is to provide academic and professional resources, build a
           strong sense of community, and promote cultural representation within
-          the medical field.
-        </p>
-
-        <br></br>
-
-        <p>
+          the medical field. <br /> <br />
           Whether you are looking for guidance, leadership opportunities or a
           way to give back to the community, NAAMA UCR welcomes you to be part
           of our journey.
