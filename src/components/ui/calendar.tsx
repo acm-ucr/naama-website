@@ -95,14 +95,14 @@ function Calendar({
   ...props
 }: CalendarProps) {
   return (
-    <div className="">
-      <p className="text-5xl">
+    <div className="relative">
+      <p className="font-playfair text-naama-blue-200 relative top-[2.3vw] ml-[17vw] text-2xl">
         Take a look at the <span className="italic">Calendar</span>
       </p>
       <DayPicker
         showOutsideDays={showOutsideDays}
         className={cn(
-          "font-playfair mb-10 rounded-none border-none p-3",
+          "font-playfair p-3, relative mb-10 rounded-none border-none",
           className,
         )}
         classNames={{
@@ -110,12 +110,12 @@ function Calendar({
             "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
           month:
             "space-y-8 md:w-2/3 w-[90%] flex justify-right flex-col mx-auto",
-          caption: "flex items-center justify-center pl-[43vw] relative",
-          caption_label: "text-5xl font-medium text-naama-blue-200",
-          nav: "gap-2 flex items-center",
+          caption: "flex items-center justify-center pl-[33.5vw] relative",
+          caption_label: "text-2xl font-medium text-naama-blue-200",
+          nav: "flex items-center",
           nav_button:
-            "h-10 w-10 bg-naama-blue-200 p-0 opacity-90 hover:opacity-100 rounded-md",
-          nav_button_previous: "absolute right-[20.8vw]",
+            "h-6 w-14 bg-naama-blue-200 p-0 opacity-90 hover:opacity-100 rounded-4xl",
+          nav_button_previous: "absolute right-[27.8vw]",
           nav_button_next: "absolute right-[0vw]",
           table: "w-full border-collapse space-y-1 table-fixed",
           head_row: "flex",
@@ -142,13 +142,13 @@ function Calendar({
         components={{
           IconLeft: ({ className, ...props }) => (
             <MoveLeft
-              className={cn("text-naama-ivory-100 h-10 w-10", className)}
+              className={cn("text-naama-ivory-100 h-6 w-14", className)}
               {...props}
             />
           ),
           IconRight: ({ className, ...props }) => (
             <MoveRight
-              className={cn("text-naama-ivory-100 h-10 w-10", className)}
+              className={cn("text-naama-ivory-100 h-6 w-14", className)}
               {...props}
             />
           ),

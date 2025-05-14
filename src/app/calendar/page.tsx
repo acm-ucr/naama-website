@@ -1,8 +1,10 @@
 import CalendarEvents from "@/components/calendar/CalendarEvents";
+import EventsDescription from "@/components/calendar/EventsDescription";
 
 const Calendar = () => {
   return (
-    <div className="bg-naama-ivory-100">
+    <div className="">
+      <EventsDescription />
       <CalendarEvents />
     </div>
   );

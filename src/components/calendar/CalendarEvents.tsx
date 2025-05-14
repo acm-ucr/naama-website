@@ -15,7 +15,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import Title from "../Title";
 
 const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});
@@ -48,8 +47,10 @@ const Events = () => {
   });
 
   return (
-    <>
-      <Title title="Events" />
+    <div className="bg-naama-ivory-100 rounded-t-4xl py-15">
+      <h1 className="font-playfair text-naama-blue-200 ml-5 p-3 text-4xl">
+        Upcoming <span className="italic">Events</span>{" "}
+      </h1>
       <motion.div
         className="box"
         initial={{ y: 30, opacity: 0 }}
@@ -105,7 +106,7 @@ const Events = () => {
           setCurrent={setCurrent}
         />
       </motion.div>
-    </>
+    </div>
   );
 };
 
