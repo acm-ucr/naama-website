@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/Button";
-import CircularText from "@/components/CircularText";
+import CircularText from "@/components/home/CircularText";
 import heroImage from "@/public/gallery/image16.webp";
 
 const Hero = () => {
