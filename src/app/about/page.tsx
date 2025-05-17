@@ -1,6 +1,6 @@
 import AboutUs from "@/components/about/About";
 import GetInvolved from "@/components/about/GetInvolved";
-import ExploreOurEvents from "@/components/home/ExploreOurEvents";
+import ExploreOurEvents from "@/components/about/ExploreOurEvents";
 
 const About = () => {
   return (
