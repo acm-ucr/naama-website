@@ -148,13 +148,19 @@ function Calendar({
         components={{
           IconLeft: ({ className, ...props }) => (
             <MoveLeft
-              className={cn("text-naama-blue-200 h-6 w-14 cursor-pointer", className)}
+              className={cn(
+                "text-naama-blue-200 h-6 w-14 cursor-pointer",
+                className,
+              )}
               {...props}
             />
           ),
           IconRight: ({ className, ...props }) => (
             <MoveRight
-              className={cn("text-naama-blue-200 h-6 w-14 cursor-pointer", className)}
+              className={cn(
+                "text-naama-blue-200 h-6 w-14 cursor-pointer",
+                className,
+              )}
               {...props}
             />
           ),
