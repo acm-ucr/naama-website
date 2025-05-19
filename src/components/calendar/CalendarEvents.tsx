@@ -90,7 +90,7 @@ const Events = () => {
           </Dialog>
         }
       </motion.div>
-      <div className="ml-10 flex flex-col gap-10 pt-14">
+      <div className="ml-10 flex flex-col gap-10">
         <h1 className="font-playfair text-naama-blue-200 pb-10 text-5xl">
           Upcoming <span className="italic">Events</span>{" "}
         </h1>
@@ -111,7 +111,7 @@ const Events = () => {
             </>
           ))
         ) : (
-          <div className="text-naama-blue-200 font-playfair mx-auto my-32 w-full text-center text-4xl">
+          <div className="text-naama-blue-200 font-playfair mx-auto my-20 w-full text-center text-4xl">
             No upcoming events!
           </div>
         )}
