@@ -50,38 +50,44 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
 
   return (
     <div
-      className={`${isToday ? "bg-naama-blue-200 text-naama-ivory-100 opacity-35" : "bg-naama-ivory-100 text-naama-blue-200"} scrollbar-hidden h-20 overflow-y-auto border md:h-24`}
+      className={`${isToday ? "bg-naama-blue-200/35 text-naama-ivory-100" : "bg-naama-ivory-100 text-naama-blue-200"} scrollbar-hidden relative h-20 overflow-y-auto border md:h-24`}
     >
       <p
-        className={`${currentMonth ? "" : "invisible"} sticky px-2 text-right`}
+        className={`${currentMonth ? "" : "invisible"} sticky top-0 z-10 px-2 text-right`}
       >
         {date.getDate()}
       </p>
+      <div className="mt-1 flex flex-col gap-1 pb-1">
+        {events?.map(({ title, start, end, location, description }, index) => {
+          const startDate = new Date(start as string);
+          const endDate = new Date(end as string);
 
-      {events?.map(({ title, start, end, location, description }, index) => {
-        const startDate = new Date(start as string);
-
-        if (
-          startDate.getDate() === date.getDate() &&
-          startDate.getMonth() === date.getMonth() &&
-          startDate.getFullYear() === date.getFullYear()
-        ) {
-          return (
-            <div
-              className="hover:bg-opacity-100 my-1 cursor-pointer p-1 text-center text-ellipsis text-white"
-              key={index}
-              onClick={() =>
-                setCurrent({ title, start, end, location, description })
-              }
-            >
-              {startDate.getHours() < 12
-                ? (startDate.getHours() % 12) + "am"
-                : (startDate.getHours() % 12) + "pm"}{" "}
-              {title}
-            </div>
-          );
-        }
-      })}
+          if (
+            startDate.getDate() === date.getDate() &&
+            startDate.getMonth() === date.getMonth() &&
+            startDate.getFullYear() === date.getFullYear()
+          ) {
+            return (
+              <div
+                className="bg-naama-blue-200 hover:bg-opacity-90 text-naama-ivory-100 font-nunito mx-1 cursor-pointer items-center justify-center px-2 py-1.5 text-left"
+                key={index}
+                onClick={() =>
+                  setCurrent({ title, start, end, location, description })
+                }
+              >
+                <div className="truncate text-xs font-semibold">{title}</div>
+                <div className="text-xs font-thin">
+                  {startDate.getHours() % 12 || 12}
+                  {endDate &&
+                    `-${new Date(end as string).getHours() % 12 || 12}`}
+                  {endDate.getHours() >= 12 ? "pm" : "am"}
+                  {location && ` ${location}`}
+                </div>
+              </div>
+            );
+          }
+        })}
+      </div>
     </div>
   );
 };
@@ -95,7 +101,7 @@ function Calendar({
   ...props
 }: CalendarProps) {
   return (
-    <div className="relative">
+    <div className="relative pt-28">
       <p className="font-playfair text-naama-blue-200 relative top-[2.3vw] ml-[17vw] text-2xl">
         Take a look at the <span className="italic">Calendar</span>
       </p>

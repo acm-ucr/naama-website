@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+import EventCard from "./EventCard";
 import { motion } from "motion/react";
 import {
   Calendar,
@@ -48,9 +50,6 @@ const Events = () => {
 
   return (
     <div className="bg-naama-ivory-100 rounded-t-4xl py-15">
-      <h1 className="font-playfair text-naama-blue-200 ml-5 p-3 text-4xl">
-        Upcoming <span className="italic">Events</span>{" "}
-      </h1>
       <motion.div
         className="box"
         initial={{ y: 30, opacity: 0 }}
@@ -62,7 +61,7 @@ const Events = () => {
             open={Object.keys(current).length > 0}
             onOpenChange={() => setCurrent({})}
           >
-            <DialogContent>
+            <DialogContent className="text-naama-ivory-100 bg-naama-blue-200 border-naama-ivory-100">
               <DialogHeader>
                 <DialogTitle>
                   <p className="text-xl">{current.title}</p>
@@ -91,7 +90,32 @@ const Events = () => {
           </Dialog>
         }
       </motion.div>
-
+      <div className="ml-10 flex flex-col gap-10 pt-14">
+        <h1 className="font-playfair text-naama-blue-200 pb-10 text-5xl">
+          Upcoming <span className="italic">Events</span>{" "}
+        </h1>
+        {data && data.length > 0 ? (
+          data?.slice(0, 2).map((event: EventProps, index: number) => (
+            <>
+              <EventCard
+                key={index}
+                start={event.start}
+                end={event.end}
+                location={event.location}
+                description={event.description}
+                title={event.title}
+              />
+              {index === 0 && data.length > 1 && (
+                <div className="border-naama-blue-200 my-4 mr-10 border-b-2"></div>
+              )}
+            </>
+          ))
+        ) : (
+          <div className="text-naama-blue-200 font-playfair mx-auto my-32 w-full text-center text-4xl">
+            No upcoming events!
+          </div>
+        )}
+      </div>
       <motion.div
         className="box"
         initial={{ y: 30, opacity: 0 }}
