@@ -61,7 +61,7 @@ const Events = () => {
             open={Object.keys(current).length > 0}
             onOpenChange={() => setCurrent({})}
           >
-            <DialogContent className="text-naama-ivory-100 bg-naama-blue-200 border-naama-ivory-100">
+            <DialogContent className="text-naama-ivory-100 bg-naama-blue-200 border-naama-ivory-100 [&>button]:cursor-pointer">
               <DialogHeader>
                 <DialogTitle>
                   <p className="text-xl">{current.title}</p>
