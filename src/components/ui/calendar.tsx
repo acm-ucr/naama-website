@@ -50,38 +50,44 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
 
   return (
     <div
-      className={`${isToday ? "bg-naama-blue-200 text-naama-ivory-100 opacity-35" : "bg-naama-ivory-100 text-naama-blue-200"} scrollbar-hidden h-20 overflow-y-auto border md:h-24`}
+      className={`${isToday ? "bg-naama-blue-200/35" : "bg-naama-ivory-100"} scrollbar-hidden text-naama-blue-200 relative h-20 overflow-y-auto border md:h-24`}
     >
       <p
-        className={`${currentMonth ? "" : "invisible"} sticky px-2 text-right`}
+        className={`${currentMonth ? "" : "invisible"} sticky top-0 z-10 px-2 text-right`}
       >
         {date.getDate()}
       </p>
+      <div className="mt-1 flex flex-col gap-1 pb-1">
+        {events?.map(({ title, start, end, location, description }, index) => {
+          const startDate = new Date(start as string);
+          const endDate = new Date(end as string);
 
-      {events?.map(({ title, start, end, location, description }, index) => {
-        const startDate = new Date(start as string);
-
-        if (
-          startDate.getDate() === date.getDate() &&
-          startDate.getMonth() === date.getMonth() &&
-          startDate.getFullYear() === date.getFullYear()
-        ) {
-          return (
-            <div
-              className="hover:bg-opacity-100 my-1 cursor-pointer p-1 text-center text-ellipsis text-white"
-              key={index}
-              onClick={() =>
-                setCurrent({ title, start, end, location, description })
-              }
-            >
-              {startDate.getHours() < 12
-                ? (startDate.getHours() % 12) + "am"
-                : (startDate.getHours() % 12) + "pm"}{" "}
-              {title}
-            </div>
-          );
-        }
-      })}
+          if (
+            startDate.getDate() === date.getDate() &&
+            startDate.getMonth() === date.getMonth() &&
+            startDate.getFullYear() === date.getFullYear()
+          ) {
+            return (
+              <div
+                className="bg-naama-blue-200 hover:bg-opacity-90 text-naama-ivory-100 font-nunito mx-1 cursor-pointer items-center justify-center px-2 py-1.5 text-left"
+                key={index}
+                onClick={() =>
+                  setCurrent({ title, start, end, location, description })
+                }
+              >
+                <div className="truncate text-xs font-semibold">{title}</div>
+                <div className="text-xs font-thin">
+                  {startDate.getHours() % 12 || 12}
+                  {endDate &&
+                    `-${new Date(end as string).getHours() % 12 || 12}`}
+                  {endDate.getHours() >= 12 ? "pm" : "am"}
+                  {location && ` ${location}`}
+                </div>
+              </div>
+            );
+          }
+        })}
+      </div>
     </div>
   );
 };
@@ -95,7 +101,7 @@ function Calendar({
   ...props
 }: CalendarProps) {
   return (
-    <div className="relative">
+    <div className="relative pt-15">
       <p className="font-playfair text-naama-blue-200 relative top-[2.3vw] ml-[17vw] text-2xl">
         Take a look at the <span className="italic">Calendar</span>
       </p>
@@ -113,11 +119,11 @@ function Calendar({
           caption: "flex items-center justify-center pl-[33.5vw] relative",
           caption_label: "text-2xl font-medium text-naama-blue-200",
           nav: "flex items-center",
-          nav_button:
-            "h-6 w-14 bg-naama-blue-200 p-0 opacity-90 hover:opacity-100 rounded-4xl",
-          nav_button_previous: "absolute right-[27.8vw]",
-          nav_button_next: "absolute right-[0vw]",
-          table: "w-full border-collapse space-y-1 table-fixed",
+          nav_button: "h-6 w-14 p-0 opacity-90 hover:opacity-100 rounded-4xl",
+          nav_button_previous: "absolute right-[25.8vw]",
+          nav_button_next: "absolute right-[4vw]",
+          table:
+            "w-full space-y-1 table-fixed border-[0.5px] border-naama-blue-200",
           head_row: "flex",
           head_cell:
             "text-muted-foreground w-full first:border-l-[0.5px] last:border-r-[0.5px] font-semibold text-md border-y-[0.5px] text-naama-blue-200 bg-naama-ivory-100",
@@ -142,13 +148,19 @@ function Calendar({
         components={{
           IconLeft: ({ className, ...props }) => (
             <MoveLeft
-              className={cn("text-naama-ivory-100 h-6 w-14", className)}
+              className={cn(
+                "text-naama-blue-200 h-6 w-14 cursor-pointer",
+                className,
+              )}
               {...props}
             />
           ),
           IconRight: ({ className, ...props }) => (
             <MoveRight
-              className={cn("text-naama-ivory-100 h-6 w-14", className)}
+              className={cn(
+                "text-naama-blue-200 h-6 w-14 cursor-pointer",
+                className,
+              )}
               {...props}
             />
           ),
@@ -166,7 +178,7 @@ function Calendar({
             const day = weekday.toLocaleDateString("en-US", {
               weekday: "short",
             });
-            return day === "Thu" ? "Thurs" : day;
+            return day;
           },
         }}
         {...props}
