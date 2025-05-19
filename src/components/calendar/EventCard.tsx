@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { EventProps } from "../ui/calendar";
 import * as motion from "motion/react-client";
 
@@ -13,7 +12,7 @@ const transition = {
   duration: 0.5,
 };
 
-const EventCard = ({ title, location, start, description }: EventProps) => {
+const EventCard = ({ title, start, description }: EventProps) => {
   const date = new Date(start as string);
   const month = date.toLocaleDateString("en-US", {
     month: "short",
