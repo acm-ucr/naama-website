@@ -11,7 +11,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-2 grid-cols-3 place-items-center font-bold md:grid md:w-full">
+    <div className="sticky top-0 z-2 font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center">
       <div className="m-2 hidden md:block">
         <Link href="/">
           <Image
@@ -32,7 +32,7 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`${isOpen ? "w-full rounded-t-lg" : "w-fit rounded-r-lg"} bg-naama-ivory-100 md:hidden`}
+        className={`${isOpen ? "w-full rounded-t-lg" : "w-fit rounded-r-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
