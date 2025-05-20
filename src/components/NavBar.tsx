@@ -32,35 +32,27 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`${isOpen ? "w-1/4 rounded-tr-lg" : "w-fit rounded-r-lg"} relative bg-white/75 md:hidden`}
+        className={`${isOpen ? "w-full rounded-t-lg" : "w-fit rounded-r-lg"} bg-naama-ivory-100 md:hidden`}
       >
-        {/* Toggle button: always visible and on top */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="p-2"
           aria-label="Toggle Menu"
         >
-          {isOpen ? <FaXmark size={30} /> : <FaBars size={30} />}
+          {isOpen ? (
+            <FaXmark size={30} className="text-naama-blue-200" />
+          ) : (
+            <FaBars size={30} className="text-naama-blue-200" />
+          )}
         </button>
 
-        {/* Mobile dropdown menu */}
         {isOpen && (
-          <div className="font-playfair absolute z-40 flex w-full flex-col gap-y-4 rounded-b-lg bg-white/75 p-4 font-bold shadow-lg">
-            <Link
-              key="Home"
-              href="/"
-              onClick={() => setIsOpen(false)}
-              className="w-fit"
-            >
+          <div className="font-playfair text-naama-blue-200 bg-naama-ivory-100 absolute z-40 flex w-full flex-col gap-y-4 rounded-b-lg p-4 font-bold shadow-lg">
+            <Link key="Home" href="/" onClick={() => setIsOpen(false)}>
               Home
             </Link>
             {Links.map(({ label, href }) => (
-              <Link
-                key={label}
-                href={href}
-                onClick={() => setIsOpen(false)}
-                className="w-fit"
-              >
+              <Link key={label} href={href} onClick={() => setIsOpen(false)}>
                 {label}
               </Link>
             ))}
