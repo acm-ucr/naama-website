@@ -32,7 +32,7 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`${isOpen ? "w-1/4 rounded-tr-lg" : "w-fit rounded-r-lg"} fixed top-0 bg-white/75 md:hidden`}
+        className={`${isOpen ? "w-1/4 rounded-tr-lg" : "w-fit rounded-r-lg"} relative bg-white/75 md:hidden`}
       >
         {/* Toggle button: always visible and on top */}
         <button
