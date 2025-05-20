@@ -11,7 +11,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-2 font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center">
+    <div className="sticky top-0 z-2 flex flex-row-reverse font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center">
       <div className="m-2 hidden md:block">
         <Link href="/">
           <Image
@@ -32,7 +32,7 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`${isOpen ? "w-full rounded-t-lg" : "w-fit rounded-r-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
+        className={`${isOpen ? "flex w-full flex-col items-end rounded-t-lg" : "w-fit rounded-l-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -47,7 +47,7 @@ const NavBar = () => {
         </button>
 
         {isOpen && (
-          <div className="font-playfair text-naama-blue-200 bg-naama-ivory-100 absolute z-40 flex w-full flex-col gap-y-4 rounded-b-lg p-4 font-bold shadow-lg">
+          <div className="font-playfair text-naama-blue-200 bg-naama-ivory-100 z-40 flex w-full flex-col items-end gap-y-4 rounded-b-lg p-4 font-bold shadow-lg">
             <Link key="Home" href="/" onClick={() => setIsOpen(false)}>
               Home
             </Link>
