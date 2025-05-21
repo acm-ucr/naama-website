@@ -4,13 +4,13 @@ import { FaHandHoldingHeart } from "react-icons/fa";
 
 const ExploreOurEvents = () => {
   return (
-    <div className="bg-naama-blue-100 font-nunito flex w-full justify-center gap-5 py-24 pr-24 text-white">
-      <div className="font-playfair mr-5 w-1/3 items-center justify-center pl-5 text-center text-4xl text-white">
+    <div className="bg-naama-blue-100 font-nunito flex w-full justify-center gap-5 py-24 pr-5 text-white sm:pr-24">
+      <div className="font-playfair mr-5 w-1/3 items-center justify-center pl-5 text-center text-xl text-white sm:text-4xl">
         Explore <span className="italic"> Our Events </span>
       </div>
-      <div className="font-nunito flex w-2/3 flex-col pr-4">
+      <div className="font-nunito flex flex-col pr-4 sm:w-2/3">
         <div className="flex pb-3 text-xl font-bold">Workshops</div>
-        <div className="flex flex-row items-center justify-center pb-2">
+        <div className="flex flex-col items-center pb-2 sm:flex-row">
           <div className="text-md flex pb-2">
             Our hands-on workshops provide members with practical skills and
             knowledge essential for careers in healthcare. From clinical
@@ -23,7 +23,7 @@ const ExploreOurEvents = () => {
         </div>
         <hr />
         <div className="flex pt-4 pb-3 text-xl font-bold">Guest Speakers</div>
-        <div className="flex flex-row items-center justify-center pb-2">
+        <div className="flex flex-col items-center justify-center pb-2 sm:flex-row">
           <div className="text-md flex pb-2">
             We host distinguished healthcare professionals who share their
             experiences, insights, and advice. These events offer a unique
@@ -36,7 +36,7 @@ const ExploreOurEvents = () => {
         </div>
         <hr />
         <div className="flex pt-4 pb-3 text-xl font-bold">Opportunities</div>
-        <div className="flex flex-row items-center justify-center pb-2">
+        <div className="flex flex-col items-center justify-center pb-2 sm:flex-row">
           <div className="text-md flex pb-2">
             NAAMA connects members with internships, research postions,
             volunteering, and networking events to support their professional
