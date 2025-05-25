@@ -17,10 +17,7 @@ const Hero = () => {
           <span className="font-bold">shared commitment</span> to excellence in
           medicine
         </p>
-        <Button
-          message="Join Now"
-          href="/"
-        />
+        <Button message="Join Now" href="/" />
       </div>
       <div className="w-1/2 p-4">
         <Image
