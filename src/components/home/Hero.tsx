@@ -5,13 +5,13 @@ import heroImage from "@/public/gallery/image16.webp";
 
 const Hero = () => {
   return (
-    <div className="font-nunito flex w-full items-start justify-center py-8 text-white">
-      <div className="flex w-1/2 flex-col items-center justify-center text-center">
+    <div className="font-nunito flex w-full flex-col items-center justify-center py-8 text-white md:flex-row md:items-start">
+      <div className="flex w-1/2 flex-col items-center justify-center pl-5 text-center">
         <CircularText text="University of California, Riverside Chapter" />
-        <h1 className="font-playfair text-6xl">
+        <h1 className="font-playfair text-4xl md:text-6xl">
           National Arab American <br /> Medical Association
         </h1>
-        <p className="mt-8 mb-16">
+        <p className="mt-8 mb-10 text-pretty">
           Empowering future healthcare leaders through{" "}
           <span className="font-bold">knowledge, support,</span> <br /> and a{" "}
           <span className="font-bold">shared commitment</span> to excellence in
@@ -22,11 +22,11 @@ const Hero = () => {
           href="/"
         />
       </div>
-      <div className="w-1/2 p-4">
+      <div className="my-auto w-1/2 p-4">
         <Image
           src={heroImage}
           alt="Hero Image"
-          className="h-full w-full"
+          className="hidden h-full w-full md:flex"
           priority
         />
       </div>
