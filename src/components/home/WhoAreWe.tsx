@@ -31,7 +31,7 @@ const WhoAreWe = () => {
             <span className="font-extrabold"> service initiatives</span>.
           </p>
           <Button
-            className="mr-14 ml-auto bg-white hover:scale-104 hover:bg-gray-200"
+            className="mr-14 ml-auto"
             message="Learn More"
             href="/about"
           />

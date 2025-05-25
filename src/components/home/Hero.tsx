@@ -20,7 +20,6 @@ const Hero = () => {
         <Button
           message="Join Now"
           href="/"
-          className="bg-white hover:scale-104 hover:bg-gray-200"
         />
       </div>
       <div className="w-1/2 p-4">

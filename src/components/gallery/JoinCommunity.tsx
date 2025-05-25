@@ -18,7 +18,7 @@ const JoinCommunity = () => {
           <Button
             message="Member Form"
             href="/"
-            className="to-naama-bl to-naama-blue-100 bg-gradient-to-r hover:scale-104 hover:bg-gray-200"
+            className="to-naama-bl to-naama-blue-100 bg-gradient-to-r"
           />
         </div>
       </div>
