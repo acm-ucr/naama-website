@@ -90,10 +90,10 @@ const Events = () => {
           </Dialog>
         }
       </motion.div>
-      <div className="ml-10 flex flex-col gap-10">
-        <h1 className="font-playfair text-naama-blue-200 pb-10 text-5xl">
+      <div className="mx-auto flex w-2/3 flex-col gap-10">
+        <p className="font-playfair text-naama-blue-200 pb-10 text-center text-5xl">
           Upcoming <span className="italic">Events</span>{" "}
-        </h1>
+        </p>
         {data && data.length > 0 ? (
           data?.slice(0, 2).map((event: EventProps, index: number) => (
             <>
@@ -106,12 +106,12 @@ const Events = () => {
                 title={event.title}
               />
               {index === 0 && data.length > 1 && (
-                <div className="border-naama-blue-200 my-4 mr-10 border-b-2"></div>
+                <div className="border-naama-blue-200 border-b-2"></div>
               )}
             </>
           ))
         ) : (
-          <div className="text-naama-blue-200 font-playfair mx-auto my-20 w-full text-center text-4xl">
+          <div className="text-naama-blue-200 font-playfair mx-auto my-15 w-full text-center text-3xl">
             No upcoming events!
           </div>
         )}

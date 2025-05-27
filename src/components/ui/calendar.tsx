@@ -101,7 +101,7 @@ function Calendar({
   ...props
 }: CalendarProps) {
   return (
-    <div className="relative pt-15">
+    <div className="relative pt-10">
       <p className="font-playfair text-naama-blue-200 relative top-[2.3vw] ml-[17vw] text-2xl">
         Take a look at the <span className="italic">Calendar</span>
       </p>

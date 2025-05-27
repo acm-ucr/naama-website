@@ -37,17 +37,17 @@ const EventCard = ({ title, start, description }: EventProps) => {
       className="text-naama-blue-200 flex w-full max-w-6xl flex-col md:flex-row"
     >
       <div className="font-nunito text-naama-blue-200 flex">
-        <div className="flex aspect-square h-40 w-40 flex-col items-center justify-center border-2 text-center">
-          <div className="text-lg">{dayOfWeek}</div>
-          <div className="text-4xl">{day}</div>
-          <div className="flex space-x-1 text-lg">
+        <div className="flex aspect-square h-24 w-24 flex-col items-center justify-center border-2 text-center">
+          <div className="text-sm">{dayOfWeek}</div>
+          <div className="text-3xl">{day}</div>
+          <div className="flex space-x-1 text-sm">
             <span>{month}</span>
             <span>{year}</span>
           </div>
         </div>
-        <div className="flex flex-col justify-around gap-2 pl-12 text-3xl">
-          <div className="font-semibold">{title}</div>
-          <div className="text-[25px]">{description}</div>
+        <div className="flex flex-col justify-center gap-2 pl-12">
+          <div className="text-lg font-semibold">{title}</div>
+          <div className="text-base">{description}</div>
         </div>
       </div>
     </motion.div>
