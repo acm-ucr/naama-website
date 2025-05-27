@@ -102,7 +102,7 @@ function Calendar({
 }: CalendarProps) {
   return (
     <div className="relative pt-10">
-      <p className="font-playfair text-naama-blue-200 relative top-[2.3vw] ml-[17vw] text-2xl">
+      <p className="font-playfair text-naama-blue-200 relative top-[2.3vw] ml-[17vw] hidden text-2xl md:block">
         Take a look at the <span className="italic">Calendar</span>
       </p>
       <DayPicker
@@ -116,12 +116,13 @@ function Calendar({
             "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
           month:
             "space-y-8 md:w-2/3 w-[90%] flex justify-right flex-col mx-auto",
-          caption: "flex items-center justify-center pl-[33.5vw] relative",
+          caption: "flex items-center justify-center md:pl-[33.5vw] relative",
           caption_label: "text-2xl font-medium text-naama-blue-200",
           nav: "flex items-center",
           nav_button: "h-6 w-14 p-0 opacity-90 hover:opacity-100 rounded-4xl",
-          nav_button_previous: "absolute right-[25.8vw]",
-          nav_button_next: "absolute right-[4vw]",
+          nav_button_previous:
+            "absolute md:right-[25.8vw] left-6 right-auto md:left-auto",
+          nav_button_next: "absolute md:right-[4vw] right-6",
           table:
             "w-full space-y-1 table-fixed border-[0.5px] border-naama-blue-200",
           head_row: "flex",

@@ -36,8 +36,8 @@ const EventCard = ({ title, start, description }: EventProps) => {
       viewport={{ once: true, amount: 0.2 }}
       className="text-naama-blue-200 flex w-full max-w-6xl flex-col md:flex-row"
     >
-      <div className="font-nunito text-naama-blue-200 flex">
-        <div className="flex aspect-square h-24 w-24 flex-col items-center justify-center border-2 text-center">
+      <div className="font-nunito text-naama-blue-200 flex flex-col text-center md:flex-row md:text-left">
+        <div className="mx-auto mb-5 flex aspect-square h-24 w-24 flex-col items-center justify-center border-2 text-center md:mx-0">
           <div className="text-sm">{dayOfWeek}</div>
           <div className="text-3xl">{day}</div>
           <div className="flex space-x-1 text-sm">
@@ -45,7 +45,7 @@ const EventCard = ({ title, start, description }: EventProps) => {
             <span>{year}</span>
           </div>
         </div>
-        <div className="flex flex-col justify-center gap-2 pl-12">
+        <div className="flex flex-col justify-center gap-2 md:pl-12">
           <div className="text-lg font-semibold">{title}</div>
           <div className="text-base">{description}</div>
         </div>
