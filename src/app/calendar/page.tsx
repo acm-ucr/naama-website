@@ -2,8 +2,21 @@ import Title from "@/components/Title";
 
 const Board = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="flex w-full grow flex-col items-center justify-center pl-15">
       <Title title="Events Calendar" />
+      
+      <p className="mt-10 flex w-screen pl-50 text-white">
+        Stay up to date with the latest events! Whether you're
+        looking to connect with like-minded 
+      </p>
+      
+      <p className="flex w-screen pl-50 text-white">        
+        peers or gain insights into the medical field, there's something for everyone. Don't miss out 
+      </p>
+      
+      <p className="flex w-screen pl-50 text-white mb-25">        
+        and check out the upcoming events today!
+      </p>
     </div>
   );
 };
