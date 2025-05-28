@@ -9,10 +9,10 @@ const JoinCommunity = () => {
           Join Our Community <span className="italic">Today</span>
         </p>
         <div className="flex translate-y-2/1 flex-col items-center gap-4 md:translate-y-0 md:py-0">
-          <p className="font-nunito text-center text-sm md:text-lg">
+          <p className="font-nunito mx-8 text-center text-sm md:text-lg">
             Want to be part of these experiences? Fill out the application form
             to
-            <br />
+            <br className="hidden md:block" />
             become a member and start your journey with us today!
           </p>
           <Button
