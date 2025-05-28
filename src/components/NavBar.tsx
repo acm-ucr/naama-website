@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <div className="sticky top-0 z-2 flex flex-row-reverse font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center">
-      <div className="m-2 hidden md:block">
+      <div className="m-8 hidden place-self-start md:block">
         <Link href="/">
           <Image
             src={logo}
