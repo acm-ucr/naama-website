@@ -25,7 +25,11 @@ const NavBar = () => {
       </div>
       <div className="font-playfair text-naama-blue-200 hidden gap-x-12 rounded-full bg-white px-10 py-2 text-lg opacity-75 md:flex">
         {Links.map(({ label, href }) => (
-          <Link key={label} href={href}>
+          <Link
+            key={label}
+            href={href}
+            className="hover:-translate-y-1 hover:underline"
+          >
             {label}
           </Link>
         ))}
