@@ -30,7 +30,7 @@ const NavBar = () => {
           <Link
             key={label}
             href={href}
-            className={`hover:-translate-y-1 hover:underline ${pathname == label.toLowerCase() ? "text-naama-blue-300 bg-naama-blue-100 underline" : ""}`}
+            className={`hover:-translate-y-1 hover:underline ${pathname == label.toLowerCase() ? "underline" : ""}`}
           >
             {label}
           </Link>
