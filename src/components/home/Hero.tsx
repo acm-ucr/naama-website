@@ -1,16 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Button from "@/components/Button";
 import CircularText from "@/components/home/CircularText";
 import heroImage from "@/public/gallery/image16.webp";
+import { motion } from "motion/react";
 
 const Hero = () => {
   return (
     <div className="font-nunito flex w-full flex-col items-center justify-center py-8 text-white md:flex-row md:items-start">
       <div className="flex w-1/2 flex-col items-center justify-center pl-5 text-center">
         <CircularText text="University of California, Riverside Chapter" />
-        <h1 className="font-playfair text-4xl md:text-6xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="font-playfair text-4xl md:text-6xl"
+        >
           National Arab American <br /> Medical Association
-        </h1>
+        </motion.h1>
         <p className="mt-8 mb-10 text-pretty">
           Empowering future healthcare leaders through{" "}
           <span className="font-bold">knowledge, support,</span> <br /> and a{" "}
