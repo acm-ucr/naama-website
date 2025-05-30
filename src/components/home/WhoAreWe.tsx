@@ -12,8 +12,8 @@ const WhoAreWe = () => {
       />
       <div className="bg-naama-ivory-100 absolute inset-0 opacity-80" />
 
-      <div className="relative z-10 flex h-full w-full items-center gap-20 px-32">
-        <h1 className="text-naama-blue-200 font-playfair text-5xl font-bold whitespace-nowrap">
+      <div className="nd:flex relative z-10 h-full w-full flex-col items-center gap-20 text-center md:px-32">
+        <h1 className="text-naama-blue-200 font-playfair text-2xl font-bold whitespace-nowrap">
           <span className="underline decoration-2 underline-offset-8">Who</span>{" "}
           are
           <span className="italic"> We</span>?
@@ -31,7 +31,7 @@ const WhoAreWe = () => {
             <span className="font-extrabold"> service initiatives</span>.
           </p>
           <Button
-            className="mr-14 ml-auto"
+            className="-mt-4 mr-14 ml-auto"
             message="Learn More"
             href="/about"
           />
