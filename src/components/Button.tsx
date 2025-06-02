@@ -11,7 +11,7 @@ const Button = ({ message, href, className }: ButtonProps) => {
   return (
     <Link
       href={href}
-      className={`font-playfair text-naama-blue-200 flex size-4 h-10 w-33 items-center justify-center gap-1.5 rounded-full bg-white tracking-tight drop-shadow-lg ${className || ""}`}
+      className={`font-playfair text-naama-blue-200 flex size-4 h-10 w-33 items-center justify-center gap-1.5 rounded-full bg-white tracking-tight drop-shadow-lg hover:scale-104 hover:bg-gray-100 ${className || ""}`}
     >
       {message}
       <GoArrowRight />
