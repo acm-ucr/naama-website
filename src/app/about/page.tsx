@@ -6,19 +6,12 @@ import aboutGroup from "../../../public/about/groupAbout.webp";
 const About = () => {
   return (
     <div className="flex w-full flex-grow flex-col">
-      {/* <div className="columns-2">
-        <div className="">
-          <AboutUs/>
-        </div>
-        <Image src={aboutGroup} alt={"About Group"} className="mx-12 mb-18" />
-      </div> */}
-
-      <div className="mx-12 mt-12 flex columns-2 justify-center">
+      <div className="mx-12 mt-12 flex columns-2 flex-col justify-center md:flex-row">
         <AboutUs />
         <Image
           src={aboutGroup}
           alt={"About Group"}
-          className="mx-12 mb-18 object-contain"
+          className="mt-12 mb-18 object-contain md:mx-12 md:mt-0"
         />
       </div>
 
