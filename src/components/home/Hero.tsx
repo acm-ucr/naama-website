@@ -19,12 +19,17 @@ const Hero = () => {
         >
           National Arab American <br /> Medical Association
         </motion.h1>
-        <p className="mt-8 mb-10 text-pretty">
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mt-8 mb-10 text-pretty"
+        >
           Empowering future healthcare leaders through{" "}
           <span className="font-bold">knowledge, support,</span> <br /> and a{" "}
           <span className="font-bold">shared commitment</span> to excellence in
           medicine
-        </p>
+        </motion.p>
         <Button message="Join Now" href="/" />
       </div>
       <div className="my-auto w-1/2 p-4">
