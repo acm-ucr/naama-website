@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import logo from "@/public/logo.svg";
 import { Links } from "@/data/links";
@@ -13,7 +14,12 @@ const NavBar = () => {
   const pathname = usePathname().replace(/^\/+/, "");
 
   return (
-    <div className="sticky top-0 z-2 flex flex-row-reverse font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="sticky top-0 z-2 flex flex-row-reverse font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center"
+    >
       <div className="m-8 hidden place-self-start md:block">
         <Link href="/">
           <Image src={logo} alt="Naama Logo" className="w-1/2" />
@@ -69,7 +75,7 @@ const NavBar = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
