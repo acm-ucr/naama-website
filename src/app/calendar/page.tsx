@@ -1,13 +1,15 @@
+import CalendarEvents from "@/components/calendar/CalendarEvents";
+import EventsDescription from "@/components/calendar/EventsDescription";
 import Title from "@/components/Title";
-import Description from "@/components/calendar/EventDescription";
 
-const Board = () => {
+const Calendar = () => {
   return (
     <>
       <Title title="Events Calendar" />
-      <Description />
+      <EventsDescription />
+      <CalendarEvents />
     </>
   );
 };
 
-export default Board;
+export default Calendar;
