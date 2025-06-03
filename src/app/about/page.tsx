@@ -4,11 +4,11 @@ import ExploreOurEvents from "@/components/about/ExploreOurEvents";
 
 const About = () => {
   return (
-    <div className="flex w-full flex-grow flex-col">
+    <>
       <AboutUs />
       <ExploreOurEvents />
       <GetInvolved />
-    </div>
+    </>
   );
 };
 
