@@ -26,7 +26,7 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`${isOpen ? "flex w-full flex-col items-end rounded-t-lg" : "w-fit rounded-l-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
+        className={`${isOpen ? "flex w-full flex-col items-end" : "w-fit rounded-l-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
