@@ -24,7 +24,7 @@ const NavBar = () => {
           <Link
             key={label}
             href={href}
-            className={`hover:-translate-y-1 hover:underline ${pathname == label.toLowerCase() ? "underline" : ""}`}
+            className={`hover:scale-125 hover:underline ${pathname == label.toLowerCase() ? "underline" : ""}`}
           >
             {label}
           </Link>
