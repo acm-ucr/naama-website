@@ -14,7 +14,7 @@ const NavBar = () => {
     <div className="sticky top-0 z-2 flex flex-row-reverse font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center">
       <div className="m-2 hidden md:block">
         <Link href="/">
-          <Image src={logo} alt="Naama Logo" className="w-2/3" />
+          <Image src={logo} alt="Naama Logo" className="w-1/2" />
         </Link>
       </div>
       <div className="font-playfair text-naama-blue-200 hidden gap-x-12 rounded-full bg-white px-10 py-2 text-lg opacity-75 md:flex">
