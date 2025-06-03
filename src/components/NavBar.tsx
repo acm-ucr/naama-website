@@ -4,8 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaXmark } from "react-icons/fa6";
-import logo from "@/../public/logo.svg";
-import { Links } from "../data/links";
+import logo from "@/public/logo.svg";
+import { Links } from "@/data/links";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,18 +14,12 @@ const NavBar = () => {
     <div className="sticky top-0 z-2 flex flex-row-reverse font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center">
       <div className="m-2 hidden md:block">
         <Link href="/">
-          <Image
-            src={logo}
-            alt="Naama Logo"
-            width={75}
-            height={75}
-            draggable={false}
-          />
+          <Image src={logo} alt="Naama Logo" className="w-1/2" />
         </Link>
       </div>
       <div className="font-playfair text-naama-blue-200 hidden gap-x-12 rounded-full bg-white px-10 py-2 text-lg opacity-75 md:flex">
-        {Links.map(({ label, href }) => (
-          <Link key={label} href={href}>
+        {Links.map(({ label, href }, index) => (
+          <Link key={index} href={href}>
             {label}
           </Link>
         ))}
@@ -51,8 +45,8 @@ const NavBar = () => {
             <Link key="Home" href="/" onClick={() => setIsOpen(false)}>
               Home
             </Link>
-            {Links.map(({ label, href }) => (
-              <Link key={label} href={href} onClick={() => setIsOpen(false)}>
+            {Links.map(({ label, href }, index) => (
+              <Link key={index} href={href}>
                 {label}
               </Link>
             ))}
