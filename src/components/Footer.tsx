@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/../public/logo.svg";
+import logo from "@/public/logo.svg";
 import { FaInstagram } from "react-icons/fa6";
 import { TbBrandLinktree } from "react-icons/tb";
 import { FaWpforms } from "react-icons/fa";

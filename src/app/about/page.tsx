@@ -14,10 +14,9 @@ const About = () => {
           className="mt-12 mb-18 object-contain md:mx-12 md:mt-0"
         />
       </div>
-
       <ExploreOurEvents />
       <GetInvolved />
-    </div>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ const AboutUs = () => {
         <h2 className="font-playfair text-4xl font-medium">
           <span className="border-b">About</span>
           <span className="italic"> Us</span>
-        </h2>
+        </p>
 
         <p className="mt-5 text-white">
           Our mission is to provide academic and professional resources, build a
