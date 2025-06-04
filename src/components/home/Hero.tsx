@@ -13,17 +13,17 @@ const Hero = () => {
         <CircularText text="University of California, Riverside Chapter" />
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          animate={{ opacity: 1, y: 40 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
           className="font-playfair text-4xl md:text-6xl"
         >
           National Arab American <br /> Medical Association
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mt-8 mb-10 text-pretty"
+          animate={{ opacity: 1, y: 40 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="mt-8 mb-20 text-pretty"
         >
           Empowering future healthcare leaders through{" "}
           <span className="font-bold">knowledge, support,</span> <br /> and a{" "}
@@ -32,14 +32,19 @@ const Hero = () => {
         </motion.p>
         <Button message="Join Now" href="/" />
       </div>
-      <div className="my-auto w-1/2 p-4">
+      <motion.div
+        initial={{ opacity: 0, x: 0 }}
+        animate={{ opacity: 1, x: -10 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        className="my-auto w-1/2 p-4"
+      >
         <Image
           src={heroImage}
           alt="Hero Image"
           className="hidden h-full w-full md:flex"
           priority
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
