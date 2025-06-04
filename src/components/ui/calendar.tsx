@@ -63,6 +63,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
           const endDate = new Date(end as string);
 
           if (
+            currentMonth &&
             startDate.getDate() === date.getDate() &&
             startDate.getMonth() === date.getMonth() &&
             startDate.getFullYear() === date.getFullYear()
