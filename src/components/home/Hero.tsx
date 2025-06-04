@@ -26,9 +26,9 @@ const Hero = () => {
           className="mt-8 mb-20 text-pretty"
         >
           Empowering future healthcare leaders through{" "}
-          <span className="font-bold">knowledge, support,</span><br /> and a{" "}
-          <span className="font-bold">shared commitment</span> to excellence in
-          medicine
+          <span className="font-bold">knowledge, support,</span>
+          <br /> and a <span className="font-bold">shared commitment</span> to
+          excellence in medicine
         </motion.p>
         <Button message="Join Now" href="/" />
       </div>
