@@ -12,8 +12,8 @@ const WhoAreWe = () => {
       />
       <div className="bg-naama-ivory-100 absolute inset-0 opacity-80" />
 
-      <div className="nd:flex relative z-10 h-full w-full flex-col items-center gap-20 text-center md:px-32">
-        <h1 className="text-naama-blue-200 font-playfair text-2xl font-bold whitespace-nowrap">
+      <div className="md:flex relative z-10 h-full flex w-full flex-col items-center justify-center gap-20 text-center md:px-32">
+        <h1 className="text-naama-blue-200 font-playfair text-l font-bold whitespace-nowrap">
           <span className="underline decoration-2 underline-offset-8">Who</span>{" "}
           are
           <span className="italic"> We</span>?
