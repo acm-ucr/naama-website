@@ -11,12 +11,12 @@ const About = () => {
         <Image
           src={aboutGroup}
           alt={"About Group"}
-          className="mt-12 mb-18 object-contain md:mx-12 md:mt-0"
+          className="mt-12 mb-18 object-contain md:mx-12 md:mt-0 md:w-1/2"
         />
       </div>
       <ExploreOurEvents />
       <GetInvolved />
-    </>
+    </div>
   );
 };
 

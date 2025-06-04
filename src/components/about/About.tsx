@@ -1,11 +1,11 @@
 const AboutUs = () => {
   return (
-    <div className="h-fit w-1/4 rounded-4xl bg-white/25 p-5 text-white">
+    <div className="h-fit w-7/8 rounded-4xl bg-white/25 p-5 text-white md:w-1/4">
       <div>
         <h2 className="font-playfair text-4xl font-medium">
           <span className="border-b">About</span>
           <span className="italic"> Us</span>
-        </p>
+        </h2>
 
         <p className="mt-5 text-white">
           Our mission is to provide academic and professional resources, build a
