@@ -11,8 +11,8 @@ const WhoAreWe = () => {
         className="absolute h-full w-full object-cover opacity-80"
       />
       <div className="bg-naama-ivory-100 absolute inset-0 opacity-80" />
-
       <div className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-20 text-center md:flex md:px-32">
+        <div className="h-16"></div>
         <p className="text-naama-blue-200 font-playfair text-l font-bold whitespace-nowrap">
           <span className="underline decoration-2 underline-offset-8">Who</span>{" "}
           are
@@ -31,7 +31,7 @@ const WhoAreWe = () => {
             <span className="font-extrabold"> service initiatives</span>.
           </p>
           <Button
-            className="-mt-4 mr-14 ml-auto"
+            className="mx-auto -mt-4"
             message="Learn More"
             href="/about"
           />
