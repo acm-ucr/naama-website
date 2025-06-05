@@ -1,4 +1,4 @@
-import BoardCard from "@/components/BoardCard";
+import BoardCard from "@/components/board/BoardCard";
 import Alexis from "../../../public/board/Alexis_Battikha.webp";
 import Raymon from "../../../public/board/Raymon_Marcos.webp";
 import Joelle from "../../../public/board/Joelle_Nana.webp";
