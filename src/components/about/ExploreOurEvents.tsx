@@ -4,10 +4,10 @@ import { FaHandHoldingHeart } from "react-icons/fa";
 
 const ExploreOurEvents = () => {
   return (
-    <div className="bg-naama-blue-100 font-nunito flex w-full flex-col justify-center gap-5 px-5 py-24 text-white lg:flex-row">
-      <div className="font-playfair items-center text-center text-2xl text-white sm:text-4xl md:mr-5">
+    <div className="bg-naama-blue-100 font-nunito flex w-full flex-col justify-around gap-4 px-4 py-24 text-white lg:flex-row">
+      <h2 className="font-playfair mx-auto text-center text-2xl text-white sm:text-4xl">
         Explore <span className="italic"> Our Events </span>
-      </div>
+      </h2>
       <div className="font-nunito mx-auto flex flex-col sm:w-2/3">
         <div className="flex pb-3 text-xl font-bold">Workshops</div>
         <div className="flex flex-col items-center pb-2 sm:flex-row">
