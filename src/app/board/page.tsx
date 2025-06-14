@@ -1,18 +1,18 @@
 import BoardCard from "@/components/board/BoardCard";
-import Alexis from "../../../public/board/Alexis_Battikha.webp";
-import Raymon from "../../../public/board/Raymon_Marcos.webp";
-import Joelle from "../../../public/board/Joelle_Nana.webp";
-import Shams from "../../../public/board/Shams_Alsammarraie.webp";
-import Ranya from "../../../public/board/Ranya_Butrus.webp";
-import Mariam from "../../../public/board/Mariam_Abbas.webp";
+import Alexis from "@/public/board/Alexis_Battikha.webp";
+import Raymon from "@/public/board/Raymon_Marcos.webp";
+import Joelle from "@/public/board/Joelle_Nana.webp";
+import Shams from "@/public/board/Shams_Alsammarraie.webp";
+import Ranya from "@/public/board/Ranya_Butrus.webp";
+import Mariam from "@/public/board/Mariam_Abbas.webp";
 import Title from "@/components/Title";
 
 const Board = () => {
   return (
-    <div className="flex flex-col items-center">
+    <>
       <Title title="Meet the Board" />
 
-      <div className="mx-auto w-full max-w-7xl px-4">
+      <div className="mx-auto my-5 w-full max-w-7xl px-4">
         <div className="grid grid-cols-3 justify-items-center gap-x-44 gap-y-36">
           <BoardCard
             image={Raymon}
@@ -58,7 +58,7 @@ const Board = () => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
