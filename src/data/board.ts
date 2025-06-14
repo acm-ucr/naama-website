@@ -5,17 +5,9 @@ import Shams from "@/public/board/Shams_Alsammarraie.webp";
 import Ranya from "@/public/board/Ranya_Butrus.webp";
 import Mariam from "@/public/board/Mariam_Abbas.webp";
 
-interface boardMemberTypes {
-  name: string;
-  title: string;
-  yearMajor: string;
-  description: string;
-  image: string;
-}
-
-export const boardMembers: boardMemberTypes[] = [
+export const boardMembers = [
   {
-    image: { Raymon },
+    image: Raymon,
     name: "Raymon Marcos",
     title: "Founder and President",
     yearMajor: "3rd Year Global and Community Health Major",
@@ -23,7 +15,7 @@ export const boardMembers: boardMemberTypes[] = [
       "Raymon Marcos is an Iraqi Chaldean originally from San Diego, where he also works as an EMT on the weekends. Between shifts and classes, he stays busy balancing pre-med life while making time to hang out with friends. Whether studying, working, or unwinding, he is always looking for ways to create a strong NAAMA community at UCR.",
   },
   {
-    image: "/board/Joelle_Nana.webp",
+    image: Joelle,
     name: "Joelle Nana",
     title: "Vice President",
     yearMajor: "3rd Year Biology Major",
@@ -31,7 +23,7 @@ export const boardMembers: boardMemberTypes[] = [
       "Joelle Nana is a Syrian American from Los Angeles with a strong interest in healthcare. Through shadowing and volunteering, she gains valuable experience in the field. Despite a busy class schedule, she makes time for shopping, TV shows, and relaxing walks. She is also dedicated to making NAAMA an outstanding medical club.",
   },
   {
-    image: "/baord/Shams_Alsammarraie.webp",
+    image: Shams,
     name: "Shams Alsammarraie",
     title: "Secretary",
     yearMajor: "2nd Year Biology Major",
@@ -39,7 +31,7 @@ export const boardMembers: boardMemberTypes[] = [
       "Shams Alsammarraie is from Iraq and lived there until she was 9 years old. She enjoys meeting new people and connecting with fellow Iraqis. When she's not on campus or with friends, she's usually with her family, dog, or in the Bay Area. She loves being part of NAAMA for its friendly, welcoming community and the fun experiences it offers.",
   },
   {
-    image: "/board/Alexis_Battikha.webp",
+    image: Alexis,
     name: "Alexis Battikha",
     title: "Treasurer",
     yearMajor: "3rd Year Neuroscience Major",
@@ -47,7 +39,7 @@ export const boardMembers: boardMemberTypes[] = [
       " Alexis Battikha grew up in San Diego and is originally Palestinian. Between a busy school and work schedule, she enjoys trying new restaurants, shopping, and spending time with family. She loves being part of a strong Arab community that supports the next generation of healthcare providers and is excited to contribute to NAAMA's growth.",
   },
   {
-    image: "/board/Ranya_Butrus.webp",
+    image: Ranya,
     name: "Ranya Butrus",
     title: "Public Relations Director",
     yearMajor: "2nd Year Psychology Major",
@@ -55,7 +47,7 @@ export const boardMembers: boardMemberTypes[] = [
       "Ranya Butrus is an Iraqi Chaldean and is grateful for the opportunity NAAMA has given her to connect with like-minded individuals, learn more about the medical field, and contribute to a supportive community. She’s excited to help grow the club and share all the amazing opportunities it offers.",
   },
   {
-    image: "/board/Mariam_Abbas.webp",
+    image: Mariam,
     name: "Mariam Abbas",
     title: "Event Coordinator",
     yearMajor: "2nd Year Biology Major",

@@ -10,6 +10,7 @@ const Boards = () => {
             key={index}
             name={name}
             image={image}
+            title={title}
             description={description}
             yearMajor={yearMajor}
           />
@@ -18,3 +19,5 @@ const Boards = () => {
     </div>
   );
 };
+
+export default Boards;
