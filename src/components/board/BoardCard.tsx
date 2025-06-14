@@ -1,20 +1,22 @@
 import Image, { StaticImageData } from "next/image";
 
+interface BoardCardProps {
+  name: string;
+  title: string;
+  yearMajor: string;
+  description: string;
+  image: StaticImageData;
+}
+
 const BoardCard = ({
   name,
   title,
   yearMajor,
   description,
   image,
-}: {
-  name: string;
-  title: string;
-  yearMajor: string;
-  description: string;
-  image: StaticImageData;
-}) => {
+}: BoardCardProps) => {
   return (
-    <div className="flex flex-col items-start text-white">
+    <div className="text-naama-ivory-100 flex flex-col items-start">
       <Image src={image} alt={name} className="w-full" />
 
       <div className="pt-5">
