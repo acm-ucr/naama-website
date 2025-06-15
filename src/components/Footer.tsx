@@ -28,7 +28,12 @@ const Footer = () => {
         <div className="hidden justify-center gap-4 md:flex">
           <p className="font-bold">UCR Chapter</p>
           <div className="flex flex-col gap-2">
-            <Link href="/">Home</Link>
+            <Link
+              className="w-fit transition-all duration-100 ease-in-out hover:opacity-80"
+              href="/"
+            >
+              Home
+            </Link>
             <Link href="/about">About Us</Link>
             <Link href="/" target="_blank">
               Contact Info

@@ -91,9 +91,9 @@ const Events = () => {
         }
       </motion.div>
       <div className="mx-auto flex w-2/3 flex-col gap-10">
-        <p className="font-playfair text-naama-blue-200 text-center text-5xl md:pb-10">
+        <h2 className="font-playfair text-naama-blue-200 text-center text-5xl md:pb-10">
           Upcoming <span className="italic">Events</span>{" "}
-        </p>
+        </h2>
         {(() => {
           const upcomingEvents =
             data?.filter((event: EventProps) => {
