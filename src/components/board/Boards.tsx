@@ -6,7 +6,7 @@ const Boards = () => {
   const secondHalf = boardMembers.slice(3);
 
   return (
-    <div className="mt-6 w-full px-24 py-12">
+    <div className="mt-6 w-full py-8 md:px-24 md:py-12">
       <div className="hidden md:block">
         <div className="grid grid-cols-3 gap-20 px-5">
           {firstHalf.map(

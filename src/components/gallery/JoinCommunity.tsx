@@ -30,7 +30,7 @@ const circleSpringVariants = {
 const JoinCommunity = () => {
   return (
     <motion.div
-      className="bg-naama-blue-100 relative flex h-[50vh] w-full justify-center overflow-hidden text-white md:h-[40vw]"
+      className="bg-naama-blue-100 relative hidden h-[50vh] w-full justify-center overflow-hidden text-white md:flex md:h-[40vw]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
