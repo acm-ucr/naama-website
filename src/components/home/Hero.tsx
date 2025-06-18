@@ -6,36 +6,41 @@ import CircularText from "@/components/home/CircularText";
 import heroImage from "@/public/gallery/image16.webp";
 import { motion } from "motion/react";
 
+const headingAnimation = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.9, ease: "easeOut" },
+  viewport: { once: true },
+};
+
+const imageAnimation = {
+  initial: { opacity: 0, x: 40 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.9, ease: "easeOut" },
+  viewport: { once: true },
+};
+
 const Hero = () => {
   return (
-    <div className="font-nunito flex w-full flex-col items-center justify-center py-8 text-white md:flex-row md:items-start">
-      <div className="flex w-1/2 flex-col items-center justify-center pl-5 text-center">
-        <CircularText text="University of California, Riverside Chapter" />
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 40 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          className="font-playfair text-4xl md:text-6xl"
-        >
-          National Arab American <br /> Medical Association
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 40 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          className="mt-8 mb-20 text-pretty"
+    <div className="font-nunito flex w-full flex-col items-center justify-center pb-8 text-white md:flex-row md:items-start">
+        <motion.div {...headingAnimation} className="flex w-1/2 flex-col items-center justify-center md:px-5 pb-5 text-center">
+          <CircularText text="University of California, Riverside Chapter" />
+          <h1
+            className="font-playfair text-4xl md:text-6xl">
+            National Arab American <br /> Medical Association
+          </h1>
+        <p
+          className="mt-8 mb-10 text-pretty"
         >
           Empowering future healthcare leaders through{" "}
           <span className="font-bold">knowledge, support,</span>
           <br /> and a <span className="font-bold">shared commitment</span> to
           excellence in medicine
-        </motion.p>
+        </p>
         <Button message="Join Now" href="/" />
-      </div>
+        </motion.div>
       <motion.div
-        initial={{ opacity: 0, x: 0 }}
-        animate={{ opacity: 1, x: -10 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
+        {...imageAnimation}
         className="my-auto w-1/2 p-4"
       >
         <Image

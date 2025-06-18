@@ -17,20 +17,18 @@ const NavBar = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
       className="sticky top-0 z-2 flex flex-row-reverse font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center"
     >
-      <div className="m-8 hidden place-self-start md:block">
-        <Link href="/">
-          <Image src={logo} alt="Naama Logo" className="w-1/2" />
-        </Link>
-      </div>
+      <Link href="/" className="m-8 hidden place-self-start md:block">
+        <Image src={logo} alt="Naama Logo" className="w-1/2" />
+      </Link>
       <div className="font-playfair text-naama-blue-200 hidden gap-x-12 rounded-full bg-white px-10 py-2 text-lg opacity-75 md:flex">
         {Links.map(({ label, href }) => (
           <Link
             key={label}
             href={href}
-            className={`hover:scale-125 hover:underline ${pathname == label.toLowerCase() ? "underline" : ""}`}
+            className={`transition-all ease-in hover:opacity-75 duration-100 hover:scale-110 underline-offset-4 hover:underline ${pathname == label.toLowerCase() ? "underline" : ""}`}
           >
             {label}
           </Link>
