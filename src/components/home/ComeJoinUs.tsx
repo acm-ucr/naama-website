@@ -19,9 +19,9 @@ const ComeJoinUs = () => {
       <h3 className="font-playfair text-5xl">
         Come <span className="italic"> Join Us</span>
       </h3>
-      <p className="items-center justify-center px-12 w-2/3 py-12 text-center text-lg md:text-xl">
+      <p className="w-2/3 items-center justify-center px-12 py-12 text-center text-lg md:text-xl">
         Whether you're looking to expand your knowledge or gain hands-on
-        experience, we are here to help you pave the way to {" "}
+        experience, we are here to help you pave the way to{" "}
         <span className="font-bold">a successful future in medicine.</span>
       </p>
       <JoinUs />
