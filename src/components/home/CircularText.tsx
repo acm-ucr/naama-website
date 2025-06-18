@@ -8,15 +8,15 @@ interface CircleTextProps {
 }
 
 const letterVariants = {
-  variants : {
-  hidden: { opacity: 0, y: 5, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { type: "spring", stiffness: 500, damping: 50 },
+  variants: {
+    hidden: { opacity: 0, y: 5, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 500, damping: 50 },
+    },
   },
-}
 };
 
 const animationProps = {

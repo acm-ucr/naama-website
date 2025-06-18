@@ -17,7 +17,7 @@ const DescriptionText = ({ text }: DescriptionTextProps) => {
   return (
     <motion.p
       {...textAnimation}
-      className="text-naama-ivory-100 font-nunito mx-auto mb-12 py-10 text-center text-xl md:mx-0 md:ml-24 md:w-3/4 md:text-left"
+      className="text-naama-ivory-100 font-nunito mx-auto mb-12 px-12 py-10 text-center text-xl md:mx-0 md:ml-24 md:w-3/4 md:px-0 md:text-left"
     >
       {text}
     </motion.p>

@@ -3,31 +3,31 @@
 import { motion } from "motion/react";
 import Button from "@/components/Button";
 
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+const circleSpringVariants = {
+  hidden: { scale: 0, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.9,
+      ease: "easeOut",
+      type: "spring",
+      damping: 10,
+      stiffness: 100,
+    },
+  },
+};
+
 const JoinCommunity = () => {
-  const fadeUpVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
-    },
-  };
-
-  const circleSpringVariants = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 0.9,
-        ease: "easeOut",
-        type: "spring",
-        damping: 10,
-        stiffness: 100,
-      },
-    },
-  };
-
   return (
     <motion.div
       className="bg-naama-blue-100 relative flex h-[50vh] w-full justify-center overflow-hidden text-white md:h-[40vw]"
