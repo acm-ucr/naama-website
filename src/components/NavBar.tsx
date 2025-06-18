@@ -9,15 +9,19 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 import logo from "@/public/logo.svg";
 import { Links } from "@/data/links";
 
+const animationProps = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.9, ease: "easeOut" },
+};
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname().replace(/^\/+/, "");
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.9, ease: "easeOut" }}
+      {...animationProps}
       className="sticky top-0 z-2 flex flex-row-reverse font-bold md:relative md:grid md:w-full md:grid-cols-3 md:place-items-center"
     >
       <Link href="/" className="m-8 hidden place-self-start md:block">
@@ -28,7 +32,7 @@ const NavBar = () => {
           <Link
             key={label}
             href={href}
-            className={`transition-all ease-in hover:opacity-75 duration-100 hover:scale-110 underline-offset-4 hover:underline ${pathname == label.toLowerCase() ? "underline" : ""}`}
+            className={`transition-all ease-in underline-offset-4 ${pathname == label.toLowerCase() ? "underline" : "hover:underline hover:opacity-75 duration-100 hover:scale-110"}`}
           >
             {label}
           </Link>
@@ -36,17 +40,17 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`${isOpen ? "flex w-full flex-col items-end rounded-b-lg" : "w-fit rounded-bl-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
+        className={`${isOpen ? "overflow-auto h-screen flex w-full flex-col items-end rounded-b-lg" : "w-fit rounded-bl-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2"
+          className="p-2 hover:cursor-pointer"
           aria-label="Toggle Menu"
         >
           {isOpen ? (
-            <FaXmark size={30} className="text-naama-blue-200" />
+            <FaXmark size={30} className="text-naama-blue-200 hover:scale-105 transition-all" />
           ) : (
-            <FaBars size={30} className="text-naama-blue-200" />
+            <FaBars size={30} className="text-naama-blue-200 hover:scale-105 transition-all" />
           )}
         </button>
 
@@ -56,7 +60,7 @@ const NavBar = () => {
               key="Home"
               href="/"
               onClick={() => setIsOpen(false)}
-              className={`${pathname == "" ? "underline" : ""}`}
+              className={`${pathname == "" ? "underline" : "transition-all hover:underline hover:scale-105 hover:opacity-75"}`}
             >
               Home
             </Link>
@@ -65,7 +69,7 @@ const NavBar = () => {
                 key={label}
                 href={href}
                 onClick={() => setIsOpen(false)}
-                className={`${pathname == label.toLowerCase() ? "underline" : ""}`}
+                className={`${pathname == label.toLowerCase() ? "underline" : "transition-all hover:underline hover:scale-105 hover:opacity-75"}`}
               >
                 {label}
               </Link>
