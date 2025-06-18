@@ -32,7 +32,7 @@ const NavBar = () => {
           <Link
             key={label}
             href={href}
-            className={`transition-all ease-in underline-offset-4 ${pathname == label.toLowerCase() ? "underline" : "hover:underline hover:opacity-75 duration-100 hover:scale-110"}`}
+            className={`underline-offset-4 transition-all ease-in ${pathname == label.toLowerCase() ? "underline" : "duration-100 hover:scale-110 hover:underline hover:opacity-75"}`}
           >
             {label}
           </Link>
@@ -40,7 +40,7 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`${isOpen ? "overflow-auto h-screen flex w-full flex-col items-end rounded-b-lg" : "w-fit rounded-bl-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
+        className={`${isOpen ? "flex max-h-screen w-full flex-col items-end overflow-auto rounded-b-lg" : "w-fit rounded-bl-lg"} bg-naama-ivory-100 sticky top-0 right-0 z-50 md:hidden`}
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -48,9 +48,15 @@ const NavBar = () => {
           aria-label="Toggle Menu"
         >
           {isOpen ? (
-            <FaXmark size={30} className="text-naama-blue-200 hover:scale-105 transition-all" />
+            <FaXmark
+              size={30}
+              className="text-naama-blue-200 transition-all hover:scale-105"
+            />
           ) : (
-            <FaBars size={30} className="text-naama-blue-200 hover:scale-105 transition-all" />
+            <FaBars
+              size={30}
+              className="text-naama-blue-200 transition-all hover:scale-105"
+            />
           )}
         </button>
 
@@ -60,7 +66,7 @@ const NavBar = () => {
               key="Home"
               href="/"
               onClick={() => setIsOpen(false)}
-              className={`${pathname == "" ? "underline" : "transition-all hover:underline hover:scale-105 hover:opacity-75"}`}
+              className={`${pathname == "" ? "underline" : "transition-all hover:scale-105 hover:underline hover:opacity-75"}`}
             >
               Home
             </Link>
@@ -69,7 +75,7 @@ const NavBar = () => {
                 key={label}
                 href={href}
                 onClick={() => setIsOpen(false)}
-                className={`${pathname == label.toLowerCase() ? "underline" : "transition-all hover:underline hover:scale-105 hover:opacity-75"}`}
+                className={`${pathname == label.toLowerCase() ? "underline" : "transition-all hover:scale-105 hover:underline hover:opacity-75"}`}
               >
                 {label}
               </Link>

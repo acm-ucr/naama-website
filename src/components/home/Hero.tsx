@@ -23,26 +23,23 @@ const imageAnimation = {
 const Hero = () => {
   return (
     <div className="font-nunito flex w-full flex-col items-center justify-center pb-8 text-white md:flex-row md:items-start">
-        <motion.div {...headingAnimation} className="flex w-1/2 flex-col items-center justify-center md:px-5 pb-5 text-center">
-          <CircularText text="University of California, Riverside Chapter" />
-          <h1
-            className="font-playfair text-4xl md:text-6xl">
-            National Arab American <br /> Medical Association
-          </h1>
-        <p
-          className="mt-8 mb-10 text-pretty"
-        >
+      <motion.div
+        {...headingAnimation}
+        className="flex w-1/2 flex-col items-center justify-center pb-5 text-center md:px-5"
+      >
+        <CircularText text="University of California, Riverside Chapter" />
+        <h1 className="font-playfair text-4xl md:text-6xl">
+          National Arab American <br /> Medical Association
+        </h1>
+        <p className="mt-8 mb-10 text-pretty">
           Empowering future healthcare leaders through{" "}
           <span className="font-bold">knowledge, support,</span>
           <br /> and a <span className="font-bold">shared commitment</span> to
           excellence in medicine
         </p>
         <Button message="Join Now" href="/" />
-        </motion.div>
-      <motion.div
-        {...imageAnimation}
-        className="my-auto w-1/2 p-4"
-      >
+      </motion.div>
+      <motion.div {...imageAnimation} className="my-auto w-1/2 p-4">
         <Image
           src={heroImage}
           alt="Hero Image"

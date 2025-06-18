@@ -3,13 +3,13 @@ import galleryImages from "@/data/gallery";
 
 const PictureGallery = () => {
   return (
-    <div className="relative flex w-full flex-wrap justify-center rounded-t-4xl bg-naama-ivory-100 py-16 px-6">
+    <div className="bg-naama-ivory-100 relative flex w-full flex-wrap justify-center rounded-t-4xl px-6 py-16">
       {galleryImages.map((src, index) => (
         <Image
           key={index}
           alt={`Gallery image ${index}`}
           src={src}
-          className="md:w-[45%] w-full m-6 rounded-xl"
+          className="m-6 w-full rounded-xl md:w-[45%]"
         />
       ))}
     </div>

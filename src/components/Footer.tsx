@@ -10,8 +10,7 @@ const Footer = () => {
   const linkClassName =
     "w-fit transition-all duration-100 ease-in-out hover:opacity-80";
 
-  const socialsClassName =
-    `${linkClassName} hover:scale-110`;
+  const socialsClassName = `${linkClassName} hover:scale-110`;
 
   return (
     <div className="bg-naama-blue-200 text-naama-ivory-100 font-nunito w-full items-center justify-center p-10">
@@ -80,16 +79,32 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-row justify-center gap-4 md:hidden">
-          <Link className={socialsClassName} href="https://www.instagram.com/naamaucr" target="_blank">
+          <Link
+            className={socialsClassName}
+            href="https://www.instagram.com/naamaucr"
+            target="_blank"
+          >
             <FaInstagram className="stroke-1" size={40} />
           </Link>
-          <Link className={socialsClassName} href="https://linktr.ee/naamaucr" target="_blank">
+          <Link
+            className={socialsClassName}
+            href="https://linktr.ee/naamaucr"
+            target="_blank"
+          >
             <TbBrandLinktree className="stroke-2" size={40} />
           </Link>
-          <Link className={socialsClassName} href="https://naamanextgen.com/" target="_blank">
+          <Link
+            className={socialsClassName}
+            href="https://naamanextgen.com/"
+            target="_blank"
+          >
             <FaWpforms className="stroke-1" size={40} />
           </Link>
-          <Link className={socialsClassName} href="https://linktr.ee/naamaucr" target="_blank">
+          <Link
+            className={socialsClassName}
+            href="https://linktr.ee/naamaucr"
+            target="_blank"
+          >
             <CiMail className="stroke-1" size={40} />
           </Link>
         </div>

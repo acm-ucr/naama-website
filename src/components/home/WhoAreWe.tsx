@@ -21,15 +21,18 @@ const rightAnimation = {
 
 const WhoAreWe = () => {
   return (
-    <div className="relative w-full h-fit">
+    <div className="relative h-fit w-full">
       <Image
         src={groupHome}
         alt="groupHome"
         className="absolute h-full w-full object-cover opacity-80"
       />
       <div className="bg-naama-ivory-100 absolute inset-0 opacity-80" />
-      <div className="md:py-20 pb-5 relative flex h-full w-full flex-col items-center justify-center px-5 md:flex md:flex-row md:gap-20 lg:px-20">
-        <motion.h2 {...leftAnimation} className="text-center text-naama-blue-200 font-playfair pt-10 text-3xl font-bold whitespace-nowrap md:pt-0 md:text-5xl">
+      <div className="relative flex h-full w-full flex-col items-center justify-center px-5 pb-5 md:flex md:flex-row md:gap-20 md:py-20 lg:px-20">
+        <motion.h2
+          {...leftAnimation}
+          className="text-naama-blue-200 font-playfair pt-10 text-center text-3xl font-bold whitespace-nowrap md:pt-0 md:text-5xl"
+        >
           <span className="underline decoration-2 underline-offset-8">Who</span>{" "}
           are
           <span className="italic"> We</span>?

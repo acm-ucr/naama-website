@@ -14,7 +14,10 @@ const titleAnimation = {
 
 const Title = ({ title }: TitleProps) => {
   return (
-    <motion.h1 {...titleAnimation} className="text-naama-ivory-100 font-playfair mx-auto md:ml-24 w-3/4 pt-20 text-center text-5xl md:text-left">
+    <motion.h1
+      {...titleAnimation}
+      className="text-naama-ivory-100 font-playfair mx-auto w-3/4 pt-20 text-center text-5xl md:ml-24 md:text-left"
+    >
       {title}
     </motion.h1>
   );
