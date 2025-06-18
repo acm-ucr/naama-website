@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Button from "@/components/Button";
 
 const JoinCommunity = () => {
@@ -19,7 +19,7 @@ const JoinCommunity = () => {
       scale: 1,
       opacity: 1,
       transition: {
-        duration: 1.2,
+        duration: 0.9,
         ease: "easeOut",
         type: "spring",
         damping: 10,

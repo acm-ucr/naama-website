@@ -30,7 +30,7 @@ const BoardCard = ({
       {...animationProps}
       className="text-naama-ivory-100 flex flex-col items-start"
     >
-      <Image src={image} alt={name} className="w-full" />
+      <Image src={image} alt={name} className="w-full rounded-lg" />
       <div className="pt-5">
         <p className="font-playfair text-med font-bold">{name}</p>
         <p className="font-playfair text-med italic">{title}</p>
