@@ -1,10 +1,10 @@
 import "./globals.css";
-import { Playfair_Display, Nunito_Sans as Nunito } from "next/font/google";
+import { Playfair_Display, Nunito_Sans } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
-const nunito = Nunito({
+const nunito = Nunito_Sans({
   subsets: ["latin"],
   display: "swap",
   weight: "400",

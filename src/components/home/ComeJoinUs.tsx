@@ -16,10 +16,10 @@ const ComeJoinUs = () => {
       {...animationProps}
       className="bg-naama-blue-200 flex w-full flex-col items-center py-20 text-center text-white"
     >
-      <h3 className="font-playfair text-5xl">
+      <h3 className="font-playfair text-3xl md:text-5xl">
         Come <span className="italic"> Join Us</span>
       </h3>
-      <p className="w-2/3 items-center justify-center px-12 py-12 text-center text-lg md:text-xl">
+      <p className="text-md w-2/3 items-center justify-center px-8 py-6 text-center md:px-12 md:py-12 md:text-xl">
         Whether you're looking to expand your knowledge or gain hands-on
         experience, we are here to help you pave the way to{" "}
         <span className="font-bold">a successful future in medicine.</span>
