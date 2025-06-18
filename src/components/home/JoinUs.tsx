@@ -16,7 +16,7 @@ const JoinUs = () => {
   return (
     <motion.div
       {...animationProps}
-      className="flex flex-col items-center justify-center gap-6 px-4 sm:px-8 md:flex-row"
+      className="flex flex-col items-center justify-center gap-6 px-12 md:flex-row md:items-stretch md:px-8"
     >
       <JoinUsCard
         title="Mentorship and Networking"
