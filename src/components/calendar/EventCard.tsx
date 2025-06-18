@@ -1,15 +1,21 @@
 import { EventProps } from "../ui/calendar";
-import * as motion from "motion/react-client";
+import { motion } from "motion/react";
 
-const animationX = {
-  hidden: { opacity: 0, x: 50 },
-  show: {
-    opacity: 1,
-    x: 0,
+const animationProps = {
+  variants: {
+    hidden: { opacity: 0, x: 50 },
+    show: {
+      opacity: 1,
+      x: 0,
+    },
   },
-};
-const transition = {
-  duration: 0.5,
+  transition: {
+    duration: 0.5,
+    delay: 0.2,
+  },
+  initial: "hidden",
+  whileInView: "show",
+  viewport: { once: true, amount: 0.2 },
 };
 
 const EventCard = ({ title, start, description }: EventProps) => {
@@ -29,11 +35,7 @@ const EventCard = ({ title, start, description }: EventProps) => {
 
   return (
     <motion.div
-      variants={animationX}
-      transition={{ ...transition, delay: 0.2 }}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      {...animationProps}
       className="text-naama-blue-200 flex w-full max-w-6xl flex-col md:flex-row"
     >
       <div className="font-nunito text-naama-blue-200 flex flex-col text-center md:flex-row md:text-left">

@@ -7,6 +7,11 @@ import { FaWpforms } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 
 const Footer = () => {
+  const linkClassName =
+    "w-fit transition-all duration-100 ease-in-out hover:opacity-80";
+
+  const socialsClassName = `${linkClassName} hover:scale-110`;
+
   return (
     <div className="bg-naama-blue-200 text-naama-ivory-100 font-nunito w-full items-center justify-center p-10">
       <div className="flex grid-cols-5 flex-col gap-4 md:grid">
@@ -28,9 +33,13 @@ const Footer = () => {
         <div className="hidden justify-center gap-4 md:flex">
           <p className="font-bold">UCR Chapter</p>
           <div className="flex flex-col gap-2">
-            <Link href="/">Home</Link>
-            <Link href="/about">About Us</Link>
-            <Link href="/" target="_blank">
+            <Link className={linkClassName} href="/">
+              Home
+            </Link>
+            <Link className={linkClassName} href="/about">
+              About Us
+            </Link>
+            <Link className={linkClassName} href="/" target="_blank">
               Contact Info
             </Link>
           </div>
@@ -38,34 +47,64 @@ const Footer = () => {
         <div className="hidden justify-center gap-4 md:flex">
           <p className="font-bold">Important Links</p>
           <div className="flex flex-col gap-2">
-            <Link href="https://naamanextgen.com/" target="_blank">
+            <Link
+              className={linkClassName}
+              href="https://naamanextgen.com/"
+              target="_blank"
+            >
               Membership Form
             </Link>
-            <Link href="/calendar">Event Calendar</Link>
+            <Link className={linkClassName} href="/calendar">
+              Event Calendar
+            </Link>
           </div>
         </div>
         <div className="hidden justify-center gap-4 md:flex">
           <p className="font-bold">Social Media</p>
           <div className="flex flex-col gap-2">
-            <Link href="https://www.instagram.com/naamaucr" target="_blank">
+            <Link
+              className={linkClassName}
+              href="https://www.instagram.com/naamaucr"
+              target="_blank"
+            >
               Instagram
             </Link>
-            <Link href="https://linktr.ee/naamaucr" target="_blank">
+            <Link
+              className={linkClassName}
+              href="https://linktr.ee/naamaucr"
+              target="_blank"
+            >
               Linktree
             </Link>
           </div>
         </div>
         <div className="flex flex-row justify-center gap-4 md:hidden">
-          <Link href="https://www.instagram.com/naamaucr" target="_blank">
+          <Link
+            className={socialsClassName}
+            href="https://www.instagram.com/naamaucr"
+            target="_blank"
+          >
             <FaInstagram className="stroke-1" size={40} />
           </Link>
-          <Link href="https://linktr.ee/naamaucr" target="_blank">
+          <Link
+            className={socialsClassName}
+            href="https://linktr.ee/naamaucr"
+            target="_blank"
+          >
             <TbBrandLinktree className="stroke-2" size={40} />
           </Link>
-          <Link href="https://naamanextgen.com/" target="_blank">
+          <Link
+            className={socialsClassName}
+            href="https://naamanextgen.com/"
+            target="_blank"
+          >
             <FaWpforms className="stroke-1" size={40} />
           </Link>
-          <Link href="https://linktr.ee/naamaucr" target="_blank">
+          <Link
+            className={socialsClassName}
+            href="https://linktr.ee/naamaucr"
+            target="_blank"
+          >
             <CiMail className="stroke-1" size={40} />
           </Link>
         </div>
