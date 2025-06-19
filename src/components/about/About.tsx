@@ -1,13 +1,16 @@
+import Image from "next/image";
+import aboutGroup from "@/public/about/groupAbout.webp";
+
 const AboutUs = () => {
   return (
-    <div className="h-fit w-7/8 rounded-4xl bg-white/25 p-5 text-white md:w-1/4">
-      <div>
-        <h2 className="font-playfair text-4xl font-medium">
+    <div className="my-auto flex flex-col items-center justify-center gap-[5vw] px-[15vw] py-[8vh] md:flex-row">
+      <div className="mx-auto h-[55vh] w-[32vh] items-center justify-center rounded-[10vh] bg-white/15 p-[5vh] text-center text-white md:mx-0 md:text-left">
+        <p className="font-playfair text-4xl font-medium">
           <span className="border-b">About</span>
-          <span className="italic"> Us</span>
-        </h2>
+          <span className="border-b italic md:border-0"> Us</span>
+        </p>
 
-        <p className="mt-5 text-white">
+        <p className="mt-5 text-white md:text-lg">
           Our mission is to provide academic and professional resources, build a
           strong sense of community, and promote cultural representation within
           the medical field. <br /> <br />
@@ -16,6 +19,11 @@ const AboutUs = () => {
           <strong>NAAMA UCR welcomes you to be part of our journey.</strong>
         </p>
       </div>
+      <Image
+        src={aboutGroup}
+        alt={"About Group"}
+        className="my-auto object-contain"
+      />
     </div>
   );
 };
