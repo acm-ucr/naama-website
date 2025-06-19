@@ -15,9 +15,9 @@ const Feed = () => {
   return (
     <motion.div
       {...animationProps}
-      className="font-playfair text-naama-blue-200 bg-naama-ivory-100 flex w-full flex-col py-24 text-center"
+      className="font-playfair text-naama-blue-200 bg-naama-ivory-100 flex w-full flex-col px-8 py-16 text-center"
     >
-      <h2 className="text-5xl font-medium">
+      <h2 className="mx-auto text-5xl font-medium">
         See Our <span className="italic">Instagram</span>
       </h2>
       <Link

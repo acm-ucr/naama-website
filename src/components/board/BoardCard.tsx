@@ -1,4 +1,14 @@
+"use client";
+
+import { motion } from "motion/react";
 import Image, { StaticImageData } from "next/image";
+
+const animationProps = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.9, ease: "easeOut" },
+  viewport: { once: true },
+};
 
 interface BoardCardProps {
   name: string;
@@ -16,16 +26,19 @@ const BoardCard = ({
   image,
 }: BoardCardProps) => {
   return (
-    <div className="text-naama-ivory-100 flex flex-col items-start">
-      <Image src={image} alt={name} className="w-full" />
-
+    <motion.div
+      {...animationProps}
+      className="text-naama-ivory-100 flex flex-col items-start"
+    >
+      <Image src={image} alt={name} className="w-full rounded-lg" />
       <div className="pt-5">
-        <div className="font-playfair text-med font-bold">{name}</div>
-        <div className="font-playfair text-med font-bold italic">{title}</div>
-        <div className="font-nunito py-7 text-sm font-normal">{yearMajor}</div>
-        <div className="font-nunito text-med font-normal">{description}</div>
+        <p className="font-playfair font-bold md:text-lg">{name}</p>
+        <p className="font-playfair md:text-lg">{title}</p>
+        <p className="font-nunito md:text-md py-2 pb-4 text-sm">{yearMajor}</p>
+        <hr className="border-naama-ivory-100/50 mx-auto w-2/3 border-t py-2" />
+        <p className="font-nunito md:text-md text-sm">{description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
