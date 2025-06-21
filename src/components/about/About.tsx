@@ -3,9 +3,9 @@ import aboutGroup from "@/public/about/groupAbout.webp";
 
 const AboutUs = () => {
   return (
-    <div className="my-auto flex flex-col items-center justify-center gap-[5vw] px-[15vw] py-[8vh] md:flex-row">
-      <div className="mx-auto h-[55vh] w-[32vh] items-center justify-center rounded-[10vh] bg-white/15 p-[5vh] text-center text-white md:mx-0 md:text-left">
-        <p className="font-playfair text-4xl font-medium">
+    <div className="flex flex-col items-center justify-center gap-[5vw] py-[8vh] md:flex-row">
+      <div className="mx-auto w-[75vw] items-center justify-center rounded-[10vh] bg-white/15 p-[4vh] text-center text-white md:mx-0 md:w-[25vh] md:text-left">
+        <p className="font-playfair text-2xl font-medium md:text-4xl">
           <span className="border-b">About</span>
           <span className="border-b italic md:border-0"> Us</span>
         </p>
@@ -22,7 +22,7 @@ const AboutUs = () => {
       <Image
         src={aboutGroup}
         alt={"About Group"}
-        className="my-auto object-contain"
+        className="my-auto w-[75vw] object-contain md:w-[35vw]"
       />
     </div>
   );
