@@ -32,10 +32,11 @@ const BoardCard = ({
     >
       <Image src={image} alt={name} className="w-full rounded-lg" />
       <div className="pt-5">
-        <p className="font-playfair text-med font-bold">{name}</p>
-        <p className="font-playfair text-med italic">{title}</p>
-        <p className="font-nunito py-7 text-sm font-normal">{yearMajor}</p>
-        <p className="font-nunito text-med font-normal">{description}</p>
+        <p className="font-playfair font-bold md:text-lg">{name}</p>
+        <p className="font-playfair md:text-lg">{title}</p>
+        <p className="font-nunito md:text-md py-2 pb-4 text-sm">{yearMajor}</p>
+        <hr className="border-naama-ivory-100/50 mx-auto w-2/3 border-t py-2" />
+        <p className="font-nunito md:text-md text-sm">{description}</p>
       </div>
     </motion.div>
   );
